@@ -1,0 +1,141 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,  initial-scale=1.0, maximum-scale=1.0,  user-scalable=no"><!---缩放比例设置，禁止用户缩放-->
+    <meta name="format-detection" content="telephone=no" /><!---忽略页面中的数字识别为电话号码-->
+    <meta name="apple-mobile-web-app-capable" content="yes" /><!---网站开启对 web app 程序的支持-->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" /><!--改变顶部状态条的颜色-->
+    <title>小租租客</title>
+    <link rel="stylesheet" href="css/ratchet.min.css"/>
+    <link rel="stylesheet" href="css/common/common.css"/>
+    <link rel="stylesheet" href="css/common/composition.css"/>
+    <link rel="stylesheet" href="css/page/release.css"/>
+</head>
+<body>
+    <header class="bar bar-nav login_bar">
+        <h1 class="title">发布服务信息</h1>
+    </header>
+    <div class="content hasFooter">
+        <div class="upload-img">
+            <ul class="clear">
+                <li class="img-list fl"><img src="images/user-img.jpg" alt=""></li>
+                <li class="upload-btn bg_f1 fl">
+                    <input class="cropit-image-input" type="file" id="browseFile" onchange="">                   
+                </li>
+            </ul>
+        </div>
+        <div class="upload-info">
+            <div class="con">
+                <div class="when border-bottom pdl_5">
+                    <span class="tit f14 c_47">服务时间：</span>
+                    <span class="radio">
+                        <input type="radio"><span class="radio-name f14 c_74">随时</span>
+                    </span>
+                </div>
+                <div class="times border-bottom pdlr_5 clear">
+                    <span class="ydt fl"><input type="text" placeholder="年/月/日"></span>
+                    <span class="two-time fl clear f14 c_74">
+                        <input class="fl" type="text" placeholder="0: 00">到
+                        <input class="fr" type="text" placeholder="24: 00">
+                    </span>
+                </div>   
+                <div class="money border-bottom pdlr_5 clear">
+                    <span class="tit fl">时薪(元)：</span>
+                    <span class="input-money"><input type="text"></span>
+                </div>
+                <div class="items pdlr_5">
+                    <p class="tit f14 c_74">服务内容：</p>
+                    <ul class="radios-list clear">
+                        <li class="fl"><input type="radio"><span class="radio-name f14 c_74">家教</span></li>
+                        <li class="fl"><input type="radio"><span class="radio-name f14 c_74">扫地</span></li>
+                        <li class="fl"><input type="radio"><span class="radio-name f14 c_74">擦窗</span></li>
+                        <li class="fl"><input type="radio"><span class="radio-name f14 c_74">疏通管道</span></li>
+                        <li class="fl"><input type="radio"><span class="radio-name f14 c_74">送货</span></li>
+                        <li class="fl"><input type="radio"><span class="radio-name f14 c_74">刷马桶</span></li>
+                    </ul>
+                </div>
+                <div class="money border-bottom pdlr_5 clear">
+                    <span class="tit fl">身高：</span>
+                    <span class="input-money"><input type="text"></span>
+                </div>
+                <div class="money border-bottom pdlr_5 clear">
+                    <span class="tit fl">体重：</span>
+                    <span class="input-money"><input type="text"></span>
+                </div>
+                <div class="items pdlr_5">
+                    <p class="tit f14 c_74">服务内容：</p>
+                    <ul class="radios-list clear">
+                        <li class="fl"><input type="radio"><span class="radio-name f14 c_74">家教</span></li>
+                        <li class="fl"><input type="radio"><span class="radio-name f14 c_74">扫地</span></li>
+                        <li class="fl"><input type="radio"><span class="radio-name f14 c_74">擦窗</span></li>
+                        <li class="fl"><input type="radio"><span class="radio-name f14 c_74">疏通管道</span></li>
+                        <li class="fl"><input type="radio"><span class="radio-name f14 c_74">送货</span></li>
+                        <li class="fl"><input type="radio"><span class="radio-name f14 c_74">刷马桶</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="release-btn plr20">
+            <button id="orderBtn" class="btn btn-block btn-theme">确认发布</button>
+        </div>
+    </div>
+    <nav class="bar bar-tab">
+        <a class="tab-item active" href="index.html">
+            <span class="icon icon-home"></span>
+            <span class="tab-label">首页</span>
+        </a>
+        <a class="tab-item" href="publish.html">
+            <span class="icon icon-fabu"></span>
+            <span class="tab-label">发布</span>
+        </a>
+        <!--<a class="tab-item" href="nearby.html">
+            <span class="icon icon-location"></span>
+            <span class="tab-label">附近的人</span>
+        </a>-->
+        <a class="tab-item" href="userCenter.html">
+            <span class="icon icon-yonghu"></span>
+            <span class="tab-label">我的</span>
+        </a>
+    </nav>
+    <div class="image-editor fade">   
+        <div id="wrapper" style="padding: 25px;">  
+          
+            <div id="component_box" style="position: relative; border: 1px green solid; max-width: 100%;min-height:100px;min-width:100px;margin:0 auto;">  
+                <div id="tipBox" style="display: none;">  
+                    <img src=""/>  
+                </div>  
+                <div id="mainCutter" style="overflow: hidden; display: none; position: relative;width:100%;">  
+                    <img id="imgPreview"  style=" width:100%;vertical-align:middle;margin:0 auto;"/>  
+                    <div id="cutBox" style=" position:absolute; width: 50px; height: 50px; opacity: 0.5; background: gray;"></div>  
+                </div>  
+            </div>  
+          
+            <!--画布-->  
+          
+            <canvas id="cropper" style=" display:none;border:1px solid red; width: 200px; height: 200px;margin:0 auto;" ></canvas>  
+        </div>  
+        <div><span style="color: green;">调整裁剪区域大小：</span>  
+            <!--调整用slider-->  
+            <div><div id="processBar" style=" margin: 0 auto; position: relative; width: 220px; height: 20px; background: green;"><div id="processPoint" style="width: 18px; height: 20px; position: absolute;left: 0;top: 0;"></div></div></div>  
+        </div>  
+        <div id="the_show" style="display: none;">  
+            <h2>提示：</h2>  
+            <div id="theTips"></div>  
+          
+            <h2>后台获得的图像</h2>  
+            <img src="" id="showImg"/>  
+        </div>           
+        <div class="export-btn plr20">
+            <input class="btn btn-theme btn-block export" type="button" id="saveimg" value="保存图片"/>
+        </div>                         
+    </div>          
+    <script type="text/javascript" src="scripts/frame/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="scripts/frame/template.js"></script>
+    <script type="text/javascript" src="scripts/common/Global.js"></script>
+    <script type="text/javascript" src="scripts/common/common.js"></script>
+    <script type="text/javascript" src="scripts/frame/jquery.cropit.js"></script>
+    <script type="text/javascript" src="scripts/page/release.js"></script>
+</body>
+
+</html>

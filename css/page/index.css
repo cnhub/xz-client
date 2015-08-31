@@ -1,0 +1,38 @@
+/*.bar .nav_lineHeight{line-height: 42px}*/
+.nav_searchBd{margin:5px 45px 0 70px;background: #9762b8;line-height: 34px;border-radius: 17px;}
+.nav_searchBd.searchPage{margin-left: 45px}
+.nav_searchBd .sb_i{margin:0 30px;height: 100%}
+.nav_searchBd .iconfont{width: 30px;text-align: center}
+.nav_searchBd .icon{font-style: normal;padding: 0;color: #fff;height: 34px;line-height: 34px}
+#index_search{background: transparent;color: #fff;border: 0;padding: 10px 0;outline: 0;height:34px;margin: 0}
+::-webkit-input-placeholder{color:#c5acd6}
+#user_cityName{display: inline-block;max-width: 54px;line-height: 42px}
+#enter_cityList{position: relative;line-height: 0}
+#enter_cityList i{position: absolute;right: -15px;line-height: 42px}
+.bar-tab-login .icon{font-size: 18px}
+
+/*搜索*/
+#searchHeader .nav_searchBd{margin:5px 55px 0 40px;}
+#searchHeader #close_search{background-color: transparent;border: 0;color: #fff;top: 9px}
+
+/*内容*/
+.nav-con{bottom: auto;padding: 8px 0;position: static}
+.nav-con .tab-item{border-left:1px solid #e4e4e4;height: 30px}
+
+.index-list{border-top: 1px solid #ddd}
+.index-list .list-item{padding: 8px 10px;border-bottom: 1px solid #ddd;}
+.index-list .list-item img{width: 70px;height: 70px}
+.index-list .list-item .con{margin-left: 75px;margin-right: 85px}
+.index-list .list-item .con h4{margin-bottom: 0}
+.index-list .list-item .tag-list span{display: inline-block;padding: 0 5px;color: #a86dcd;border: 1px solid #a86dcd;border-radius: 10px;line-height: 16px;font-size: 12px;margin-top: 2px}
+.index-list .list-item .rightPrice{position: absolute; height:70%;top: 15%; border-left: 1px solid #ddd;right: 5px;padding:0 5px}
+.index-list .list-item .rightPrice .price{margin-top: 10%}
+/*地址选择*/
+#city_bd{position: absolute;top: 0;right: 0;bottom: 0;left:0;background: #fff;z-index: 20;-webkit-transform: scale(0);opacity: 0;-webkit-transition: .5s;transition: .5s;}
+#city_bd.cityShow{-webkit-transform: scale(1);opacity: 1;display: block}
+#city_bd header .fr{border: 0;background: transparent;color:#fff;outline-width: 0;top: 9px }
+#city_bd .bar{z-index: 100}
+.list_item {width: 100%}
+.list_item .city_list_hd{display:block;padding:7px 15px 7px;background: #f4f4f4;color: #949494}
+.list_item .table-view{margin-bottom: 0}
+.list_item li{padding-left: 20px}
