@@ -1,148 +1,42 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
 <html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,  initial-scale=1.0, maximum-scale=1.0,  user-scalable=no"><!---缩放比例设置，禁止用户缩放-->
-    <meta name="format-detection" content="telephone=no" /><!---忽略页面中的数字识别为电话号码-->
-    <meta name="apple-mobile-web-app-capable" content="yes" /><!---网站开启对 web app 程序的支持-->
-    <meta name="apple-mobile-web-app-status-bar-style" content="black" /><!--改变顶部状态条的颜色-->
-    <title>小租租客</title>
-    <link rel="stylesheet" href="css/ratchet.min.css" />
-    <link rel="stylesheet" href="css/common/common.css" />
-    <link rel="stylesheet" href="css/common/composition.css" />
-    <link rel="stylesheet" href="css/page/index.css" />
-</head>
-<body>
-    <div id="city_bd">
-        <header class="bar bar-nav">
-            <a class="icon icon-close pull-right" id="close_cityList"></a>
-            <h1 class="title">城市列表</h1>
-        </header>
-        <div class="content">
-            <!--定位城市-->
-            <div class="list_item">
-                <span class="city_list_hd">定位</span>
-                <ul class="table-view">
-                    <li class="table-view-cell" id="user_defaultCity">成都</li>
-                </ul>
-            </div>
-            <!--常规城市-->
-            <div class="list_item">
-                <span class="city_list_hd">服务范围</span>
-                <ul class="table-view">
-                    <li class="table-view-cell">成都市</li>
-                </ul>
-            </div>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="author" content="fansabc@gmail.com">
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <!-- <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" /> -->
+        <meta content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" name="viewport"/>
+        <link rel="stylesheet" href="styles/common.css">
+        <script data-main="main" src="scripts/vendor/require.js"></script>
+        <title>小租</title>
+    </head>
+    <body>
+        <div class="m-loading">
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
         </div>
-    </div>
-    <header class="bar bar-nav">
-        <a class="nav_lineHeight pull-left nav_city" id="enter_cityList"> <span class="ellipsis" id="user_cityName">定位中</span><i class="icon icon-down"></i></a>
-        <a class="nav_lineHeight icon icon-compose pull-right" href="center/myMessage.html"></a>
-        <div class="nav_searchBd">
-            <form action="">
-                <i class="icon icon-search fl c_fff" id="go_search"></i>
-                <i class="icon icon-close fr c_fff" id="qrCode_search"></i>
-                <span class="icon icon-close fr hide" id="del_searchVal"></span>
-                <div class="sb_i">
-                    <input type="search" id="index_search" placeholder="关键字搜索" />
-                </div>
-            </form>
-
-        </div>
-    </header>
-    <div class="content hasFooter bg_f1">
-        <nav class="bar bar-tab nav-con">
-            <a class="tab-item" href="javascript:void(0)">内容</a>
-            <a class="tab-item" href="javascript:void(0)">价格</a>
-            <a class="tab-item" href="javascript:void(0)">年龄</a>
-            <a class="tab-item" href="javascript:void(0)">身高</a>
-            <a class="tab-item" href="javascript:void(0)">XX</a>
-        </nav>
-        <ul class="index-list mt10 bg_f" onclick="window.location.href='orderDetails.html'">
-            <li class="list-item oh">
-                <img src="" class="fl" alt="" />
-                <div class="tc rightPrice">
-                    <div class="price"><span class="c_theme f18">500</span> /小时</div>
-                    <span>500m</span>
-                </div>
-                <div class="con">
-                    <h4>无忧保姆 <span class="icon icon-close"></span></h4>
-                    <div class="tag-list oh">
-                        <span>扫地</span>
-                        <span>洗衣服</span>
-                        <span>洗衣服</span>
-                        <span>洗衣服</span>
-                        <span>洗衣服</span>
-                        <span>洗衣服</span>
-                    </div>
-                </div>
-            </li>
-        </ul>
-        <ul class="index-list mt10 bg_f" onclick="window.location.href='orderDetails.html'">
-            <li class="list-item oh">
-                <img src="" class="fl" alt="" />
-                <div class="tc rightPrice">
-                    <div class="price"><span class="c_theme f18">500</span> /小时</div>
-                    <span>500m</span>
-                </div>
-                <div class="con">
-                    <h4>无忧保姆 <span class="icon icon-close"></span></h4>
-                    <div class="tag-list oh">
-                        <span>扫地</span>
-                        <span>洗衣服</span>
-                        <span>洗衣服</span>
-                        <span>洗衣服</span>
-                        <span>洗衣服</span>
-                        <span>洗衣服</span>
-                    </div>
-                </div>
-            </li>
-        </ul>
-
-        <ul class="index-list mt10 bg_f" onclick="window.location.href='orderDetails.html'">
-            <li class="list-item oh">
-                <img src="" class="fl" alt="" />
-                <div class="tc rightPrice">
-                    <div class="price"><span class="c_theme f18">500</span> /小时</div>
-                    <span>1.5km</span>
-                </div>
-                <div class="con">
-                    <h4>无忧保姆 <span class="icon icon-close"></span></h4>
-                    <div class="tag-list oh">
-                        <span>扫地</span>
-                        <span>洗衣服</span>
-                        <span>洗衣服</span>
-                        <span>洗衣服</span>
-                        <span>洗衣服</span>
-                        <span>洗衣服</span>
-                    </div>
-                </div>
-            </li>
-        </ul>
-    </div>
-    <nav class="bar bar-tab">
-        <a class="tab-item active" href="index.html">
-            <span class="icon icon-home"></span>
-            <span class="tab-label">首页</span>
-        </a>
-        <a class="tab-item" href="publish.html">
-            <span class="icon icon-fabu"></span>
-            <span class="tab-label">发布</span>
-        </a>
-        <!--<a class="tab-item" href="nearby.html">
-            <span class="icon icon-location"></span>
-            <span class="tab-label">附近的人</span>
-        </a>-->
-        <a class="tab-item" href="userCenter.html">
-            <span class="icon icon-yonghu"></span>
-            <span class="tab-label">我的</span>
-        </a>
-    </nav>
-    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=UffHBsxG6dmiUNW1ajV3hZRE"></script>
-    <script type="text/javascript" src="scripts/frame/jquery-2.1.4.min.js"></script>
-    <script type="text/javascript" src="scripts/frame/template.js"></script>
-    <script type="text/javascript" src="scripts/common/Global.js"></script>
-    <script type="text/javascript" src="scripts/common/common.js"></script>
-    <script type="text/javascript" src="scripts/page/index.js"></script>
-</body>
+    </body>
 </html>
