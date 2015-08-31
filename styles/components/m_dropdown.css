@@ -1,0 +1,87 @@
+/*
+* use      :  .m-dropdown;
+*/
+/***************************************************
+* feature  :  变量配置;
+* update   :  2015/02/05;
+* use      :  ;
+* extend   :  ;
+* example  :  ;
+* desc     :  ;
+* feedback :  此处填入 issue, 并请附带以下信息[os_version, browser_version, page_path, issue_description]
+*          -  demo => [windows 7, IE 8, http://diligrp.com/icon.html, 在不定height下未能垂直居中];
+****************************************************/
+.bg-img {
+  background: url('../../images/icon/icon.png') no-repeat;
+  background-size: 150px;
+}
+.m-dropdown {
+  display: inline-block;
+  line-height: 30px;
+  overflow: visible;
+}
+.m-dropdown .current {
+  font-size: 14px;
+  color: #FFF;
+  position: relative;
+  display: inline-block;
+  padding: 0 25px 0 10px;
+  cursor: pointer;
+}
+.m-dropdown .current:after {
+  content: '';
+  position: absolute;
+  right: 7px;
+  top: 50%;
+  width: 11px;
+  height: 7px;
+  cursor: pointer;
+  margin-top: -3px;
+  background: url("../../images/icon.png") -121px -206px no-repeat;
+  background-size: 150px;
+}
+.m-dropdown .dropdown-items {
+  background: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  top: 40px;
+  border-radius: 3px;
+  min-width: 85px;
+  display: none;
+}
+.m-dropdown .dropdown-items:before {
+  content: '';
+  position: absolute;
+  top: -16px;
+  left: 17px;
+  width: 0;
+  height: 0;
+  font-size: 0;
+  overflow: hidden;
+  border: 8px solid rgba(0, 0, 0, 0.8);
+  border-color: transparent transparent rgba(0, 0, 0, 0.8) transparent;
+}
+.m-dropdown .dropdown-items .item {
+  display: block;
+  line-height: 45px;
+  border-bottom: 1px solid #666;
+  text-align: left;
+  color: #EEE;
+}
+.m-dropdown .dropdown-items .item a {
+  padding: 0 15px;
+  font-size: 14px;
+  display: inline-block;
+  color: #EEE;
+}
+.m-dropdown .dropdown-items .item:first-child {
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+.m-dropdown .dropdown-items .item:last-child {
+  border: none;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+.m-dropdown .dropdown-items .item .m-icon {
+  margin-right: 5px;
+}

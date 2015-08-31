@@ -1,0 +1,93 @@
+/*
+ * button css 
+ * Code at 2015/01/27 
+ * by van
+ */
+
+// @btn-666: #666;
+// @btn-6c2: #6c2;
+// @btn-5b2: #5b2;
+// @btn-fon: #6acb3b;
+// @btn-fff: #fff;
+// @btn-f9d: #ff9d2c;
+// @btn-fa4: #fa4535;
+@import "var";
+
+.display-as-inline () {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+}
+
+.btn-white,
+.btn-white-f,
+.btn-white-fb,
+.btn-white-fb18,
+.btn-red,
+.btn-green-f,
+.btn-orange-f {
+    .display-as-inline;
+}
+.btn-red,
+.btn-white,
+.btn-grey,
+.btn-white-f,
+.btn-white-fb,
+.btn-white-fb18,
+.btn-green-f,
+.btn-orange-f {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    background: #fff;
+    height: 45px;
+    line-height: 44px;
+    padding: 0 40px;
+    margin: 10px 0;
+    cursor: pointer;
+    vertical-align: middle;
+}
+.btn-grey,
+.btn-white {
+    color: @btn-666;
+    height: 39px;
+    line-height: 39px;
+}
+.btn-white-fb,
+.btn-white-fb18 {
+    border-color: @btn-fon;
+}
+.btn-white-f,
+.btn-white-fb,
+.btn-white-fb18 {
+    color: @btn-fon;
+}
+.btn-green-f {
+    border-color: @btn-6c2;
+    background: @btn-6c2;
+}
+.btn-orange-f {
+    border-color: @btn-f9d;
+    background: @btn-f9d;
+}
+.btn-red,
+.btn-green-f,
+.btn-orange-f {
+    color: @btn-fff;
+}
+.btn-red,
+.btn-green-f,
+.btn-orange-f,
+.btn-white-fb18 {
+    font-size: 18px;
+}
+.btn-red {
+    border: 1px solid @btn-fa4;
+    background: @btn-fa4;
+}
+.btn-grey {
+    border-color: #ccc;
+    color: #d6d6d6;
+}
+

@@ -1,0 +1,404 @@
+@import "var";
+/**
+	m/m_bar
+	左下角工具条
+*/
+
+.m-bar {
+    position: absolute;
+    z-index: 10;
+}
+
+.m-bar-bg {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: none;
+}
+
+.m-bar-content {
+    position: fixed;
+    z-index: 10;
+    left: 20px;
+    bottom: 65px;
+    text-align: center;
+    .m-bar-btn {
+        position: relative;
+        width: 46px;
+        height: 46px;
+        border-radius: 100%;
+        background: @hbg-color;
+        border: 2px #fff solid;
+        z-index: 1001;
+    }
+    .m-bar-icon {
+        margin: 0;
+        display: inline-block;
+        height: 100%;
+    }
+    a {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        left: 0;
+        top: 0;
+        display: block;
+        background: @bg-fff;
+        border-radius: 100%;
+        font-size: 12px;
+        color: #666;
+
+        -webkit-transform: translate(0, 0) translateZ(0);
+        -moz-transform: translate(0, 0) translateZ(0);
+        -o-transform: translate(0, 0) translateZ(0);
+        transform: translate(0, 0) translateZ(0);
+
+        -webkit-transition: -webkit-transform ease-out .25s;
+        -moz-transition: -moz-transform ease-out .25s;
+        -ms-transition: -ms-transform ease-out .25s;
+        -o-transition: -o-transform ease-out .25s;
+        transition: transform ease-out .25s;
+
+        backface-visibility:hidden;
+        -webkit-backface-visibility:hidden; /* Chrome 和 Safari */
+        -moz-backface-visibility:hidden;    /* Firefox */
+        -ms-backface-visibility:hidden;     /* Internet Explorer */
+    }
+    p {
+        line-height: normal;
+        margin-top: -2px;
+    }
+    .icon {
+        display: inline-block;
+        width: 18px;
+        height: 18px;
+        line-height: normal;
+        margin-top: 5px;
+        .bg-img;
+    }
+    .icon-home {
+        background-position: 0 -309px;
+    }
+    .icon-me {
+        background-position: -23px -309px;
+    }
+    .icon-order {
+        background-position: -48px -309px;
+    }
+}
+
+// .m-bar.open {
+//     .m-bar-content {
+//         a {
+//             display: block;
+//         }
+//         .bar-home {
+//             -moz-animation: as1 .3s;
+//             -webkit-animation: as1 .3s;
+//             -o-animation: as1 .3s;
+//             animation: as1 .3s;
+            
+//             // left: 0;
+//             // top: -70px;
+
+//             // -webkit-transform: -webkit-translate(0, -70px);
+//             // -moz-transform: -moz-translate(0, -70px);
+//             // -o-transform: -o-translate(0, -70px);
+//             // transform: translate(0, -70px);
+//             -webkit-animation-fill-mode:forwards;
+//             animation-fill-mode:forwards;
+//         }
+//         .bar-me {
+//             animation: as2 0.3s;
+//             -moz-animation: as2 0.3s;
+//             /* Firefox */
+            
+//             -webkit-animation: as2 0.3s;
+//             /* Safari 和 Chrome */
+            
+//             -o-animation: as2 0.3s;
+//             /* Opera */
+//             // -webkit-transform: -webkit-translate(60px, -52px);
+//             // -moz-transform: -moz-translate(60px, -52px);
+//             // -o-transform: -o-translate(60px, -52px);
+//             // transform: translate(60px, -52px);
+//             // top: -52px;
+//             // left: 60px;
+//             -webkit-animation-fill-mode:forwards;
+//             animation-fill-mode:forwards;
+
+//         }
+//         .bar-order {
+//             animation: as3 0.3s;
+//             -moz-animation: as3 0.3s;
+//             /* Firefox */
+            
+//             -webkit-animation: as3 0.3s;
+//             /* Safari 和 Chrome */
+            
+//             -o-animation: as3 0.3s;
+//             /* Opera */
+
+//             // -webkit-transform: -webkit-translate(0, 0);
+//             // -moz-transform: -moz-translate(0, 0);
+//             // -o-transform: -o-translate(0, 0);
+//             // transform: translate(0, 0);
+//             -webkit-animation-fill-mode:forwards;
+//             animation-fill-mode:forwards;
+//         }
+//     }
+// }
+
+// // .bar-home
+// .open-home {
+//     from {
+//         -webkit-transform: -webkit-translate(0, 0);
+//         -moz-transform: -moz-translate(0, 0);
+//         -o-transform: -o-translate(0, 0);
+//         transform: translate(0, 0);
+//     }
+//     to {
+//         -webkit-transform: -webkit-translate(0, -70px);
+//         -moz-transform: -moz-translate(0, -70px);
+//         -o-transform: -o-translate(0, -70px);
+//         transform: translate(0, -70px);
+//     }
+// }
+
+// @keyframes as1 {
+//     .open-home
+// }
+
+// @-moz-keyframes as1 {
+//     .open-home
+// }
+
+// @-webkit-keyframes as1 {
+//     .open-home
+// }
+
+// @-o-keyframes as1 {
+//     .open-home
+// }
+
+// // .bar-me
+// .open-me {
+//     from {
+//         // top: 0;
+//         // left: 0;
+//         -webkit-transform: -webkit-translate(0, 0);
+//         -moz-transform: -moz-translate(0, 0);
+//         -o-transform: -o-translate(0, 0);
+//         transform: translate(0, 0);
+//     }
+//     to {
+//         // top: -52px;
+//         // left: 60px;
+//         -webkit-transform: -webkit-translate(60px, -52px);
+//         -moz-transform: -moz-translate(60px, -52px);
+//         -o-transform: -o-translate(60px, -52px);
+//         transform: translate(60px, -52px);
+//     }
+// }
+
+// @keyframes as2 {
+//     .open-me
+// }
+
+// @-moz-keyframes as2 {
+//     .open-me
+// }
+
+// @-webkit-keyframes as2 {
+//     .open-me
+// }
+
+// @-o-keyframes as2 {
+//     .open-me
+// }
+
+// // .bar-order
+// .open-order {
+//     from {
+//         -webkit-transform: -webkit-translate(0, 0);
+//         -moz-transform: -moz-translate(0, 0);
+//         -o-transform: -o-translate(0, 0);
+//         transform: translate(0, 0);
+//     }
+//     to {
+//         -webkit-transform: -webkit-translate(70px, 10px);
+//         -moz-transform: -moz-translate(70px, 10px);
+//         -o-transform: -o-translate(70px, 10px);
+//         transform: translate(70px, 10px);
+//     }
+// }
+
+// @keyframes as3 {
+//     .open-order
+// }
+
+// @-moz-keyframes as3 {
+//     .open-order
+// }
+
+// @-webkit-keyframes as3 {
+//     .open-order
+// }
+
+// @-o-keyframes as3 {
+//     .open-order
+// }
+
+// .m-bar.close {
+//     .m-bar-content {
+//         a {
+//             display: block;
+//         }
+//         .bar-home {
+//             animation: as1-1 0.3s;
+//             -moz-animation: as1-1 0.3s;
+//             /* Firefox */
+            
+//             -webkit-animation: as1-1 0.3s;
+//              Safari 和 Chrome 
+            
+//             -o-animation: as1-1 0.3s;
+//             /* Opera */
+            
+//             // left: 0;
+//             // top: 0;
+//         }
+//         .bar-me {
+//             animation: as2-1 0.3s;
+//             -moz-animation: as2-1 0.3s;
+//             /* Firefox */
+            
+//             -webkit-animation: as2-1 0.3s;
+//             /* Safari 和 Chrome */
+            
+//             -o-animation: as2-1 0.3s;
+//             /* Opera */
+            
+//             // left: 0;
+//             // top: 0;
+//         }
+//         .bar-order {
+//             animation: as3-1 0.3s;
+//             -moz-animation: as3-1 0.3s;
+//             /* Firefox */
+            
+//             -webkit-animation: as3-1 0.3s;
+//             /* Safari 和 Chrome */
+            
+//             -o-animation: as3-1 0.3s;
+//             /* Opera */
+            
+//             // left: 0;
+//             // top: 0;
+//         }
+//     }
+// }
+
+// .bar-home
+// .close-home {
+//     from {
+//         -webkit-transform: -webkit-translate(0, -70px);
+//         -moz-transform: -moz-translate(0, -70px);
+//         -o-transform: -o-translate(0, -70px);
+//         transform: translate(0, -70px);
+//     }
+//     to {
+//         -webkit-transform: -webkit-translate(0, 0);
+//         -moz-transform: -moz-translate(0, 0);
+//         -o-transform: -o-translate(0, 0);
+//         transform: translate(0, 0);
+//     }
+// }
+
+// @keyframes as1-1 {
+//     .close-home
+// }
+
+// @-moz-keyframes as1-1 {
+//     .close-home
+// }
+
+// @-webkit-keyframes as1-1 {
+//     .close-home
+// }
+
+// @-o-keyframes as1-1 {
+//     .close-home
+// }
+
+// .bar-me
+// .close-me {
+//     from {
+//         -webkit-transform: -webkit-translate(60px, -52px);
+//         -moz-transform: -moz-translate(60px, -52px);
+//         -o-transform: -o-translate(60px, -52px);
+//         transform: translate(60px, -52px);
+//     }
+//     to {
+//         -webkit-transform: -webkit-translate(0, 0);
+//         -moz-transform: -moz-translate(0, 0);
+//         -o-transform: -o-translate(0, 0);
+//         transform: translate(0, 0);
+//     }
+// }
+
+// @keyframes as2-1 {
+//     .close-me
+// }
+
+// @-moz-keyframes as2-1 {
+//     .close-me
+// }
+
+// @-webkit-keyframes as2-1 {
+//     .close-me
+// }
+
+// @-o-keyframes as2-1 {
+//     .close-me
+// }
+
+// .bar-order
+// .close-order {
+//     from {
+//         -webkit-transform: translate(70px, 10px);
+//         -moz-transform: translate(70px, 10px);
+//         -o-transform: translate(70px, 10px);
+//         transform: translate(70px, 10px);
+//     }
+//     to {
+//         -webkit-transform: translate(0, 0);
+//         -moz-transform: translate(0, 0);
+//         -o-transform: translate(0, 0);
+//         transform: translate(0, 0);
+//     }
+// }
+
+// @keyframes as3-1 {
+//     .close-order
+// }
+
+// @-moz-keyframes as3-1 {
+//     from {
+//         bottom: -10px;
+//         left: 70px;
+//     }
+//     .close-order
+// }
+
+// @-webkit-keyframes as3-1 {
+//     .close-order
+// }
+
+// @-o-keyframes as3-1 {
+//     .close-order
+// }

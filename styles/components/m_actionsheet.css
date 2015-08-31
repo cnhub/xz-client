@@ -1,0 +1,70 @@
+/***************************************************
+* feature  :  actionSheet组件，模拟IOS actionSheet外观;
+* update   :  2015/02/03;
+* use      :  .m-actionsheet;
+* extend   :  .actionsheet-*;
+* example  :  ;
+* desc     :  ;
+* feedback :  此处填入 issue, 并请附带以下信息[os_version, browser_version, page_path, issue_description]
+*          -  demo => [windows 7, IE 8, http://diligrp.com/icon.html, 在不定height下未能垂直居中];
+****************************************************/
+/***************************************************
+* feature  :  变量配置;
+* update   :  2015/02/05;
+* use      :  ;
+* extend   :  ;
+* example  :  ;
+* desc     :  ;
+* feedback :  此处填入 issue, 并请附带以下信息[os_version, browser_version, page_path, issue_description]
+*          -  demo => [windows 7, IE 8, http://diligrp.com/icon.html, 在不定height下未能垂直居中];
+****************************************************/
+.bg-img {
+  background: url('../../images/icon/icon.png') no-repeat;
+  background-size: 150px;
+}
+.m-actionsheet {
+  position: fixed;
+  left: 10px;
+  right: 10px;
+  bottom: 0;
+  padding-bottom: 10px;
+  z-index: 20;
+  -webkit-transform: translate(0, 100%) translateZ(0);
+  -ms-transform: translate(0, 100%) translateZ(0);
+  -o-transform: translate(0, 100%) translateZ(0);
+  transform: translate(0, 100%) translateZ(0);
+  -webkit-transition: -webkit-transform cubic-bezier(0.22, 0.61, 0.36, 1) 0.15s;
+  -moz-transition: -moz-transform cubic-bezier(0.22, 0.61, 0.36, 1) 0.15s;
+  -o-transition: -o-transform cubic-bezier(0.22, 0.61, 0.36, 1) 0.15s;
+  transition: transform cubic-bezier(0.22, 0.61, 0.36, 1) 0.15s;
+}
+.m-actionsheet ul {
+  list-style: none;
+}
+.m-actionsheet li {
+  line-height: 50px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.95);
+  border-top: 1px solid #ddd;
+}
+.m-actionsheet li:first-child {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border: none;
+}
+.m-actionsheet li:last-child {
+  margin-top: 10px;
+  border-radius: 8px;
+  border: none;
+}
+.m-actionsheet li.last-item {
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+.m-actionsheet li a {
+  display: block;
+  color: #027aff;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+}

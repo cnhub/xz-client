@@ -1,0 +1,185 @@
+/***************************************************
+* feature  :  表单组件类集合，提供input、textarea等样式;
+* update   :  2015/02/03;
+* use      :  按需使用;
+* extend   :  ;
+* example  :  ;
+* desc     :  ;
+* feedback :  此处填入 issue, 并请附带以下信息[os_version, browser_version, page_path, issue_description]
+*          -  demo => [windows 7, IE 8, http://diligrp.com/icon.html, 在不定height下未能垂直居中];
+****************************************************/
+@import "var";
+
+.m-input{
+	display: inline-block;
+	line-height: normal;
+	line-height: 22px;
+	min-height: 22px;
+	padding: 3px;
+	background: none;
+	font-size: 14px;
+	color: #000;
+	border: 1px solid #ddd;
+	text-align: left;
+	outline: none;
+	background-color: #f5f5f5;
+	border-radius: 0;
+	box-shadow: none;
+	vertical-align: middle;
+	&.input-small{
+		width: 47px;
+	}
+	&.input-large{
+		width: 92px;
+	}
+	&:focus{
+		background-color: #fff;
+		border-color: #23AC38;
+	}
+}
+
+
+.m-textarea{
+	width: 100%;
+	padding: 8px;
+	box-sizing: border-box;
+	font-size: 14px;
+	// color: #BBB;
+	min-height: 90px;
+	border: 1px solid #ddd;
+	border-width: 1px 0;
+	margin-top: 10px;
+	outline: none;
+	border-radius: 0;
+	box-shadow: none;
+	resize:none;
+	-webkit-appearance: none;
+}
+
+.m-input-number{
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	background-color: #FFF;
+	font-size: 0;
+	input{
+		line-height: normal;
+		float: left;
+		height: 22px;
+		padding: 5px 5px 6px;
+		font-size: 12px;
+		color: #666;
+		width: 40px;
+		text-align: center;
+	}
+	span{
+		float: left;
+		position: relative;
+		width: 33px;
+		height: 33px;
+		cursor: pointer;
+		&:before, &:after{
+			content: '';
+			position: absolute;
+			width: 15px;
+			height: 1px;
+			top: 50%;
+			left: 50%;
+			margin-left: -7px;
+			background-color: #999;
+			font-size: 0;
+			overflow: hidden;
+			cursor: pointer;
+		}
+	}
+	.reduce{
+		border-right: 1px solid #ccc;
+		&:after{
+			display: none;
+		}
+	}
+	.add{
+		border-left: 1px solid #ccc;
+		&:after{
+			content: '';
+			position: absolute;
+			height: 15px;
+			width: 1px;
+			margin: -7px 0 0;
+		}
+	}
+}
+
+input.m-radio {
+	.icon-xk-no;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+    margin: 0px;
+    position: relative;
+    outline: none;
+    &:focus{
+	    outline:0;
+	    outline: none;
+    }
+    &:checked {
+    	.icon-xk-yes;
+    }
+}
+
+
+.m-select{
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	min-width: 50px;
+	.select-text{
+		color:#999;
+		text-align: right;
+		display: block;
+		line-height: 21px;
+	}
+	select{
+		border: 0;
+		font-size: 14px;
+		background: none;
+		outline: none;
+		-webkit-appearance: none;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width:100%;
+		opacity: 0;
+	}
+}
+
+
+.m-input-date{
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	min-width: 50px;
+	.current{
+		color:#999;
+		text-align: right;
+		display: block;
+		line-height: 21px;
+	}
+	input{
+		border: 0;
+		font-size: 14px;
+		background: none;
+		outline: none;
+		// -webkit-appearance: none;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width:100%;
+		height: 100%;
+		opacity: 0;
+	}
+}

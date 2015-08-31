@@ -1,0 +1,265 @@
+/***************************************************
+* feature  :  全局icon库，提供常用icon集合;
+* update   :  2015/02/03;
+* use      :  .m-icon;
+* extend   :  .icon-*;
+* example  :  <i class="m-icon icon-back">返回<i>;
+* desc     :  默认为深色或彩色icon, 通过 .white 来引用白色icon;
+* feedback :  此处填入 issue, 并请附带以下信息[os_version, browser_version, page_path, issue_description]
+*          -  demo => [windows 7, IE 8, http://diligrp.com/icon.html, 在不定height下未能垂直居中];
+****************************************************/
+@import "var";
+@import "sprite";
+//retina @2x icon
+.sprite-width(@sprite) {
+  width: extract(@sprite, 5)/2;
+}
+
+.sprite-height(@sprite) {
+  height: extract(@sprite, 6)/2;
+}
+
+.sprite-position(@sprite) {
+  @sprite-offset-x: extract(@sprite, 3)/2;
+  @sprite-offset-y: extract(@sprite, 4)/2;
+  background-position: @sprite-offset-x @sprite-offset-y;
+}
+
+.sprite-background-size(@spritesheet-width) {
+  	background-size: @spritesheet-width/2;
+}
+
+.sprite-image(@sprite) {
+  @sprite-image: extract(@sprite, 9);
+  @sprite-image-bare: ~`"@{sprite-image}".slice(1, -1)`;
+  background-image: url(@sprite-image-bare);
+}
+
+.sprite(@sprite) {
+  .sprite-image(@sprite);
+  .sprite-position(@sprite);
+  .sprite-width(@sprite);
+  .sprite-height(@sprite);
+  .sprite-background-size(@spritesheet-width);
+}
+.m-icon{
+	display: inline-block;
+	vertical-align: middle;
+}
+.sprites(@spritesheet-sprites);
+
+.icon-arrow{
+  .icon-yjt;
+}
+
+// .m-icon{
+// 	width: 25px;
+// 	height: 25px;
+// 	display: inline-block;
+// 	vertical-align: middle;
+// 	text-align: left;
+// 	text-indent: -999em;
+// 	// font-size: 0;
+// 	overflow: hidden;
+// 	background:url("@{iconURI}bank_card.png") center center no-repeat;
+
+// 	&.icon-back{
+// 		background-image: url("@{iconURI}arrow_rt@2x.png");
+// 		&.white{
+// 			background-image: url("@{iconURI}arrow_rt_white@2x.png");
+// 		}
+// 		background-size: 10px;
+// 		-webkit-transform: rotateZ(180deg);
+// 		-ms-transform: rotateZ(180deg);
+// 		-o-transform: rotateZ(180deg);
+// 		transform: rotateZ(180deg);
+// 	}
+
+// 	&.icon-more{
+// 		background-image: url("@{iconURI}more@2x.png");
+// 		&.white{
+// 			background-image: url("@{iconURI}more_white@2x.png");
+// 		}
+// 		background-size: 20px;
+// 	}
+
+// 	&.icon-scan{
+// 		background-image: url("@{iconURI}scan@2x.png");
+// 		background-size: 22px;
+// 		&.white{
+// 			background-image: url("@{iconURI}scan_white@2x.png");
+// 			background-size: 25px;
+// 		}
+// 	}
+
+// 	&.icon-fav{
+// 		background-image: url("@{iconURI}fav@2x.png");
+// 		&.on{
+// 			background-image: url("@{iconURI}fav_ht@2x.png");
+// 		}
+// 		background-size: 25px;
+// 		&.white{
+// 			background-image: url("@{iconURI}fav_white@2x.png");
+// 			&.on{
+// 				background-image: url("@{iconURI}fav_white_ht@2x.png");
+// 			}
+// 		}
+// 	}
+
+// 	&.icon-bank-card{
+// 		background-image: url("@{iconURI}bank_card.png");
+// 		background-size: 25px;
+// 	}
+
+// 	&.icon-wallet{
+// 		background-image: url("@{iconURI}wallet.png");
+// 		background-size: 25px;
+// 	}
+//     &.icon-user {
+//       background-image: url("@{imgURI}user-icon.png");
+//       background-size: 150px;
+//       background-position: -132px -44px;
+//       width: 18px;
+//       height: 20px;
+//     }
+//     &.icon-logo{
+//     	width: 25px;
+//     	height: 44px;
+//     	background: url("@{imgURI}icon.png") -125px 11px no-repeat;
+//     	background-size: 150px;
+//     }
+//     &.icon-pas {
+//       background-image: url("@{imgURI}user-icon.png");
+//       background-size: 150px;
+//       background-position: -132px -44px;
+//       width: 18px;
+//       height: 20px;
+//     }
+//     &.icon-pwd {
+//       background-image: url("@{imgURI}user-icon.png");
+//       background-size: 150px;
+//       background-position: -132px -21px;
+//       width: 18px;
+//       height: 23px;
+//     }
+//     &.icon-msg {
+//       background-image: url("@{imgURI}user-icon.png");
+//       background-size: 150px;
+//       background-position: 0px -48px;
+//       width: 18px;
+//       height: 20px;
+//     }
+
+//     &.icon-lock {
+//       background-image: url("@{imgURI}user-icon.png");
+//       background-size: 150px;
+// 	  background-position: -61px -61px;
+// 	  width: 18px;
+// 	  height: 20px;
+//     }
+		
+// 	&.icon-location{
+// 		width: 14px;
+// 		height: 20px;
+// 		background: url("@{imgURI}icon.png") -41px -282px  no-repeat;
+// 		background-size: 150px;
+// 	}
+
+// 	&.icon-search{
+// 		width: 20px;
+// 		height: 20px;
+// 		background: url("@{imgURI}icon.png") -59px -141px no-repeat;
+// 		background-size: 150px;
+// 	}
+
+// 	&.icon-bag{
+// 		background: url("@{imgURI}icon.png") -122px -143px no-repeat;
+// 		background-size: 150px;
+// 		width: 16px;
+// 		height: 16px;
+// 	}
+
+// 	&.icon-shop{
+// 		width: 16px;
+// 		height: 16px;
+// 		background: url("@{imgURI}icon.png")  -92px -143px no-repeat;
+// 		background-size: 150px;
+// 	}
+
+// 	&.icon-history{
+// 		width: 16px;
+// 		height: 16px;
+// 		background: url("@{imgURI}icon.png") -30px -220px no-repeat;
+// 		background-size: 150px;
+// 	}
+// 	&.icon-up{
+// 		width: 12px;
+// 		height: 16px;
+// 		background: url("@{imgURI}icon.png") -60px -220px no-repeat;
+// 		background-size: 150px;
+// 		margin-top: -2px;
+// 	}
+// 	&.icon-down{
+// 		width: 12px;
+// 		height: 16px;
+// 		background: url("@{imgURI}icon.png") -89px -220px no-repeat;
+// 		background-size: 150px;
+// 		margin-top: -1px;
+// 	}
+// 	&.icon-add{
+// 		width: 16px;
+// 		height: 16px;
+// 		background: url("@{imgURI}icon.png") -60px -112px no-repeat;;
+// 		background-size: 150px;
+// 		margin: -4px 5px 0 0;
+// 	}
+
+// 	&.icon-call{
+// 		background-image: url("@{iconURI}call_white@2x.png");
+// 		background-size: 25px;
+// 		&.white{
+// 			background-image: url("@{iconURI}call_white@2x.png");
+// 			background-size: 25px;
+// 		}
+// 	}
+
+//   	&.icon-about {
+// 	  background-image: url("@{imgURI}icon-1-3.png");
+// 	  background-position: 0px -111px;
+// 	  width: 60px;
+// 	  height: 60px;
+// 	  background-size: 250px;
+// 	}
+
+//   	&.icon-use {
+// 	  background-image: url("@{imgURI}icon-1-3.png");
+// 	  background-position: -61px -110px;
+// 	  width: 60px;
+// 	  height: 60px;
+// 	  background-size: 250px;
+// 	}
+
+// 	&.icon-overdue {
+// 	  background-image: url("@{imgURI}icon-1-3.png");
+// 	  background-position: -123px -110px;
+// 	  width: 60px;
+// 	  height: 60px;
+// 	  background-size: 250px;
+// 	}
+
+//   	&.icon-arrows {
+// 	  background-image: url("@{imgURI}zhixiang.png");
+// 	  width: 30px;
+// 	  height: 20px;
+// 	  background-size: 30px;
+// 	}
+// }
+
+// .remove-icon{
+// 	display: inline-block;
+// 	width: 16px;
+// 	height: 16px;
+// 	background-image: url("../../images/icon.png");
+// 	background-size: 150px;
+// 	background-position: -30px -140px;
+// }

@@ -1,0 +1,19 @@
+input.m-radio {
+  background: url("../../images/icon.png") -90px -236px repeat;
+  width: 20px;
+  -webkit-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  height: 20px;
+  display: inline-block;
+  background-size: 150px;
+  border: none;
+  cursor: pointer;
+  margin: 0px;
+  position: relative;
+  outline: none;
+}
+input.m-radio:checked {
+  background: url("../../images/icon.png") -60px -236px repeat;
+  background-size: 150px;
+}

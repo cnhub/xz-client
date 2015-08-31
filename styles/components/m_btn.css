@@ -1,0 +1,95 @@
+/***************************************************
+* feature  :  按钮，默认提供3种样式;
+* update   :  2015/02/03;
+* use      :  .m-btn;
+* extend   :  .btn-*;
+* example  :  ;
+* desc     :  ;
+* feedback :  此处填入 issue, 并请附带以下信息[os_version, browser_version, page_path, issue_description]
+*          -  demo => [windows 7, IE 8, http://diligrp.com/icon.html, 在不定height下未能垂直居中];
+****************************************************/
+/***************************************************
+* feature  :  变量配置;
+* update   :  2015/02/05;
+* use      :  ;
+* extend   :  ;
+* example  :  ;
+* desc     :  ;
+* feedback :  此处填入 issue, 并请附带以下信息[os_version, browser_version, page_path, issue_description]
+*          -  demo => [windows 7, IE 8, http://diligrp.com/icon.html, 在不定height下未能垂直居中];
+****************************************************/
+.bg-img {
+  background: url('../../images/icon/icon.png') no-repeat;
+  background-size: 150px;
+}
+.m-btn,
+a.m-btn {
+  display: inline-block;
+  padding: 0 15px;
+  min-width: 43px;
+  line-height: 28px;
+  font-size: 14px;
+  color: #666;
+  text-align: center;
+  border: none;
+  background-color: #FFF;
+  cursor: pointer;
+  vertical-align: middle;
+  border: 1px solid #EEE;
+  background-color: #EEE;
+}
+.m-btn.btn-success,
+a.m-btn.btn-success {
+  color: #FFF;
+  background-color: #23AC38;
+  border-color: #23AC38;
+}
+.m-btn.btn-success.reverse,
+a.m-btn.btn-success.reverse {
+  background-color: #FFF;
+  color: #23ac38;
+  line-height: 43px;
+  border: 1px solid #23ac38;
+}
+.m-btn.btn-large,
+a.m-btn.btn-large {
+  font-size: 16px;
+  line-height: 48px;
+}
+.m-btn.btn-default,
+a.m-btn.btn-default {
+  background-color: #FFF;
+  color: #666;
+  border-color: #ddd;
+}
+.m-btn.btn-warning,
+a.m-btn.btn-warning {
+  color: #FFF;
+  background-color: #ff9d2c;
+  border-color: #ff9d2c;
+}
+.m-btn.btn-danger,
+a.m-btn.btn-danger {
+  color: #FFF;
+  background-color: #FA4535;
+  border-color: #FA4535;
+}
+.m-btn.btn-text,
+a.m-btn.btn-text {
+  background: none;
+  border: 1px solid #23ac38;
+  color: #23ac38;
+  width: 65px;
+  font-size: 12px;
+  text-align: center;
+  line-height: 23px;
+  padding: 0;
+  float: right;
+  border-radius: 2px;
+  margin-top: -2px;
+}
+.m-btn.disabled,
+a.m-btn.disabled {
+  background-color: #ddd;
+  border-color: #ddd;
+}

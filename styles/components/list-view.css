@@ -1,0 +1,139 @@
+.m-list-view {
+  margin-top: 10px;
+}
+.m-list-view .cell {
+  font-size: 14px;
+  padding: 0 0 0 15px;
+  background-color: #FFF;
+  overflow: hidden;
+  position: relative;
+  text-align: left;
+}
+.m-list-view .cell-header {
+  background-color: #f8f8f8;
+  padding: 0 10px;
+}
+.m-list-view .cell-header .title {
+  font-size: 13px;
+  color: #333;
+  line-height: 35px;
+  width: auto;
+}
+.m-list-view .cell-header .text {
+  font-size: 13px;
+  line-height: 35px;
+  float: right;
+  color: #9e9e9e;
+  text-align: right;
+  margin: 0;
+}
+.m-list-view .cell-basic {
+  padding: 11px 10px;
+}
+.m-list-view .cell-basic .title,
+.m-list-view .cell-basic .text {
+  float: none;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 10px 0 0;
+  line-height: 1.5;
+}
+.m-list-view .cell-basic .sub-title {
+  padding-top: 10px;
+  font-size: 13px;
+  color: #999;
+}
+.m-list-view .cell-radio {
+  text-align: right;
+  padding: 0 10px;
+  margin-bottom: 10px;
+  background-color: #eee;
+}
+.m-list-view .cell-radio .title {
+  color: #333;
+  width: auto;
+  text-align: left;
+}
+.m-list-view .cell-radio .text {
+  float: none;
+  text-align: right;
+}
+.m-list-view .cell-radio .m-radio {
+  margin-left: 8px;
+}
+.m-list-view .cell-radio .m-table-view {
+  margin: 0 -10px;
+}
+.m-list-view .cell-radio .m-table-view .cell-radio {
+  margin: 0;
+  background-color: #FFF;
+}
+.m-list-view .cell-extend .m-table-view {
+  margin: 0 0 0 45px;
+}
+.m-list-view .cell-extend .m-table-view .cell {
+  padding: 0;
+}
+.m-list-view .cell-extend .m-table-view .text {
+  margin-left: 0;
+}
+.m-list-view .cell-pic {
+  padding: 15px;
+}
+.m-list-view .cell-pic .pic {
+  float: left;
+}
+.m-list-view .cell-pic .cont {
+  margin-left: 90px;
+}
+.m-list-view .cell-pic h3 {
+  font-size: 14px;
+  font-weight: normal;
+}
+.m-list-view .cell-pic em {
+  font-size: 16px;
+  font-weight: normal;
+}
+.m-list-view .cell-pic p {
+  color: #9b9b9b;
+  font-size: 12px;
+}
+.m-list-view .acc-icon {
+  position: relative;
+  padding-right: 30px;
+}
+.m-list-view .acc-icon .acc {
+  position: absolute;
+  right: 0;
+  top: 0;
+  min-width: 30px;
+  height: 100%;
+  line-height: 44px;
+  text-align: left;
+  color: #999;
+  text-align: right;
+}
+.m-list-view .acc-icon .acc .m-icon {
+  margin-right: 4px;
+}
+.m-list-view .title {
+  font-size: 15px;
+  color: #999;
+  float: left;
+  font-weight: 400;
+  line-height: 44px;
+}
+.m-list-view .text {
+  display: block;
+  font-size: 15px;
+  color: #333;
+  line-height: 44px;
+  position: relative;
+  white-space: nowrap;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.m-list-view .text .m-input {
+  font-size: 15px;
+}

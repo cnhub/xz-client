@@ -1,0 +1,53 @@
+@import "var";
+
+.m-tab {
+    width: 70%;
+}
+.m-tab-one {
+    width: 100%;
+}
+.m-tab li {
+    width: 50%;
+    float: left;
+    border: 0;
+}
+.m-tab .on {
+    border-bottom: 1px solid #6c2;
+}
+.filter-view span,
+.m-tab a {
+    display: block;
+    margin: 7px 0;
+    border-left: 1px solid #ddd;
+    margin-left: -1px;
+    color: #999;
+}
+.m-tab .on a {
+    color: #2caa3f;
+}
+.filter-view {
+    width: 30%;
+    float: right;
+    cursor: default;
+}
+.m-tab li,
+.filter-view {
+    border-bottom: 1px solid transparent;
+    background: #fff;
+    text-align: center;
+}
+.filter-view span {
+    margin-left: 0;
+}
+.bar-one {
+    .m-tab {
+        width: 50%;
+        
+        li {
+            width: 100%;
+        }
+    }
+    .filter-view {
+        width: 50%;
+    }
+}
