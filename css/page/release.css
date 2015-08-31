@@ -1,0 +1,42 @@
+.upload-img{padding:14px 15px 2px;}
+.upload-img li{width:62px;height:62px;margin:0 12px 12px 0;border:1px solid #e4e4e4;border-radius: 1px;overflow: hidden;}
+.upload-img .img-list img{width:100%;}
+.upload-img .upload-btn a{display: block;width:100%;height:100%;}
+.upload-img .upload-btn input{display: block;width: 100%;height: 100%;opacity: 0;}
+.upload-info{padding:13px;}
+.upload-info .border-bottom{border-bottom: 1px solid #d9d9d9;}
+.upload-info .border-top{border-top:1px solid #d9d9d9;}
+.upload-info .pdlr_5{padding-left:5px;padding-right: 5px;}
+.upload-info .con{padding:15px;border:2px solid #e5e5e5;border-radius: 10px;}
+.upload-info .when{padding-top: 10px;}
+.upload-info .when,.upload-info .times,.upload-info .money{height:50px;}
+.upload-info .when .tit{display:inline-block;width:70px;}
+.upload-info .when .radio{display: inline-block;}
+.upload-info .times{padding-top:10px;}
+.upload-info .times input{height:30px;}
+.upload-info .times .ydt{width:35%;height:30px;border-right:1px solid #e4e4e4;}
+.upload-info .times .two-time{width:65%;height:30px;line-height: 30px;text-align: center;}
+.upload-info .times .two-time input{width:35%;}
+.upload-info .times .two-time input:first-child{margin-left:18px;}
+.upload-info .money .tit{width:70px;margin-top: 14px;}
+.upload-info .money .input-money{display:block;overflow: hidden;margin-top: 3px;}
+.upload-info .items{margin-top: 10px;}
+.upload-info .items .radios-list li{width:85px;margin: 15px 12px 0 0; }
+.upload-info .release-btn{padding:15px;}
+
+/*图片裁剪框*/
+.image-editor{position: fixed;width: 100%;height: 100%;background: rgb(38,38,38);top:0;left:0;z-index: 100;}
+.image-editor.fade{display: none;}
+.image-editor .adjust{text-align: center;}
+.image-editor .adjust .cropit-image-zoom-input{-webkit-appearance: none;appearance: none;height: 5px;background: none repeat scroll 0% 0% #EEE;border-radius: 5px;outline: medium none;width: 130px;margin: 0px 20px;position: relative;}
+.image-editor .export-btn{margin-top: 10px;}
+.image-editor .export{margin: 0 auto;}
+
+
+.spinner{position:absolute;top:50%;left:50%;-webkit-transform:translate(-50%,-50%);-moz-transform:translate(-50%,-50%);-o-transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);transform:translate(-50%,-50%);}
+.spinner > .spinner-dot{width:15px;height:15px;background:rgba(85,85,85,0.5);-webkit-border-radius:50%;border-radius:50%;display:inline-block;margin:0 5px;-webkit-animation:bounce 1.4s infinite ease-in-out;-moz-animation:bounce 1.4s infinite ease-in-out;-o-animation:bounce 1.4s infinite ease-in-out;-ms-animation:bounce 1.4s infinite ease-in-out;animation:bounce 1.4s infinite ease-in-out;-webkit-animation-fill-mode:both;-moz-animation-fill-mode:both;-o-animation-fill-mode:both;-ms-animation-fill-mode:both;animation-fill-mode:both;}
+.spinner > .spinner-dot:nth-child(1){-webkit-animation-delay:-.32s;-moz-animation-delay:-.32s;-o-animation-delay:-.32s;-ms-animation-delay:-.32s;animation-delay:-.32s}
+.spinner > .spinner-dot:nth-child(2){-webkit-animation-delay:-.16s;-moz-animation-delay:-.16s;-o-animation-delay:-.16s;-ms-animation-delay:-.16s;animation-delay:-.16s}
+.image-editor .cropit-image-preview .spinner{opacity:0;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";filter:alpha(opacity=0);-webkit-transition:opacity 1s;-moz-transition:opacity 1s;-o-transition:opacity 1s;-ms-transition:opacity 1s;transition:opacity 1s}
+.image-editor .cropit-image-preview.cropit-image-loading .spinner{opacity:1;-ms-filter:none;filter:none}
+@-moz-keyframes bounce{0%,80%,100%{-webkit-transform:scale(0);-moz-transform:scale(0);-o-transform:scale(0);-ms-transform:scale(0);transform:scale(0)}40%{-webkit-transform:scale(1);-moz-transform:scale(1);-o-transform:scale(1);-ms-transform:scale(1);transform:scale(1)}}@-webkit-keyframes bounce{0%,80%,100%{-webkit-transform:scale(0);-moz-transform:scale(0);-o-transform:scale(0);-ms-transform:scale(0);transform:scale(0)}40%{-webkit-transform:scale(1);-moz-transform:scale(1);-o-transform:scale(1);-ms-transform:scale(1);transform:scale(1)}}@-o-keyframes bounce{0%,80%,100%{-webkit-transform:scale(0);-moz-transform:scale(0);-o-transform:scale(0);-ms-transform:scale(0);transform:scale(0)}40%{-webkit-transform:scale(1);-moz-transform:scale(1);-o-transform:scale(1);-ms-transform:scale(1);transform:scale(1)}}@keyframes bounce{0%,80%,100%{-webkit-transform:scale(0);-moz-transform:scale(0);-o-transform:scale(0);-ms-transform:scale(0);transform:scale(0)}40%{-webkit-transform:scale(1);-moz-transform:scale(1);-o-transform:scale(1);-ms-transform:scale(1);transform:scale(1)}}

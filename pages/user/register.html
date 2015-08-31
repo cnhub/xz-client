@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,  initial-scale=1.0, maximum-scale=1.0,  user-scalable=no"><!---缩放比例设置，禁止用户缩放-->
+    <meta name="format-detection" content="telephone=no" /><!---忽略页面中的数字识别为电话号码-->
+    <meta name="apple-mobile-web-app-capable" content="yes" /><!---网站开启对 web app 程序的支持-->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" /><!--改变顶部状态条的颜色-->
+    <title>小租租客</title>
+    <link rel="stylesheet" href="../../css/ratchet.min.css"/>
+    <link rel="stylesheet" href="../../css/common/common.css"/>
+    <link rel="stylesheet" href="../../css/common/composition.css"/>
+    <link rel="stylesheet" href="../../css/page/register.css"/>
+</head>
+<body>
+<header class="bar bar-nav login_bar">
+    <a class="icon icon-left-nav pull-left"></a>
+    <a class="icon icon-check pull-right" id="registerSub"></a>
+    <h1 class="title">注册</h1>
+</header>
+<div class="content bg_none">
+    <form action="" id="login_form">
+        <div class="formBox">
+            <div class="item">
+                <input type="text" name="phone" placeholder="手机号码"/>
+            </div>
+            <div class="item phoneCodeBd">
+                <input type="text" name="code" placeholder="验证码"/>
+                <div class="codeBtn c_theme tc" id="getPhoneCode">
+                    <span>获取验证码</span>
+                    <span class="hide"><em class="num">56</em> '</span>
+                </div>
+            </div>
+            <div class="item">
+                <input type="password" name="pwd" placeholder="密码 6-30位"/>
+            </div>
+            <div class="item">
+                <input type="password" name="rePwd" placeholder="再次输入"/>
+            </div>
+        </div>
+        <div class="agree tc mt30 c_fff">
+            <input type="checkbox" class="hide" id="protocol"/>
+            <label for="protocol"><span class="icon icon-roundcheckfill c_64"></span> 我同意小租租客的</label>
+            <a href="" class="unl c_fff">用户协议</a>
+        </div>
+    </form>
+
+</div>
+<script type="text/javascript" src="../../scripts/frame/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="../../scripts/frame/template.js"></script>
+<script type="text/javascript" src="../../scripts/common/Global.js"></script>
+<script type="text/javascript" src="../../scripts/common/common.js"></script>
+<script type="text/javascript" src="../../scripts/page/register.js"></script>
+</body>
+</html>

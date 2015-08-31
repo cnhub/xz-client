@@ -1,0 +1,51 @@
+
+/*个人中心*/
+.headerImg{padding: 50px 0 25px;background: url("http://photos.tuchong.com/46839/f/2177062.jpg") no-repeat;background-size: 100%;}
+.headerImg img{width: 75px;height: 75px;border: 2px solid #fff;border-radius: 100%}
+.center-bar-tab{bottom: auto;border-top: 0;background: #a86dcd;position: static}
+.center-bar-tab .tab-item{color: #fff;line-height: 30px;padding: 10px 0;border-left: 1px solid #9762b8}
+.center-bar-tab .tab-item:first-child{border-left: 0}
+
+/*服务评价*/
+#evaluationContent{padding: 10px;background: #f1f1f1;border-top: 1px solid #ddd;border-bottom: 1px solid #ddd;min-height: 200px}
+
+/*对话*/
+#chattingBox{position: fixed;bottom: 0;height: 50px;width: 100%;background: #fff;border-top: 1px solid #ddd}
+#chattingBox input{border: 1px solid #ccc;background: #fafafa;position: absolute;left: 15px;right: 50px;width: auto;height: 35px;top: 8px}
+#chattingBox .icon{margin: 12px 16px 0 0}
+.messList{color: #747474;}
+
+.messList li:after{content: "";display: table;clear: both}
+.messList .passage{padding: 10px;color: #747474;min-height: 35px;margin-top: 10px;background: #ececec;border-radius: 10px;position: relative;float: left}
+.messList .passage .chatIco{position: absolute;width: 0;}
+.messList .passage p{margin-bottom: 0;color: #747474}
+.otherChat img{width: 50px;height: 50px;border-radius: 100%;float: left;margin-left: 10px}
+.otherChat .messList{margin:0 30px 0 75px}
+.otherChat .messList li{}
+.otherChat .messList .passage .chatIco{border-top: 1px solid transparent;border-right: 10px solid #ececec;border-bottom:12px solid transparent;left: -10px;top: 10px}
+
+.myChat .messList{margin:5px 20px 0 90px}
+.myChat .messList .passage{background: #a86dcd;color: #fff;float: right}
+.myChat .messList .passage p{color: #fff}
+.myChat .messList .passage .chatIco{border-top: 12px solid transparent;border-left: 10px solid #a86dcd;border-bottom: 1px solid transparent;right: -10px;bottom:10px}
+
+/*list-view*/
+.list-xzk{}
+.list-xzk .list-xzk-item{font-size: 12px;position: relative;width: 100%; padding: 10px;background: #fff;margin-top: 10px;border-top: 1px solid #ddd;border-bottom: 1px solid #ddd}
+.list-xzk .list-xzk-item .list-xzk-con{margin-right: 75px;line-height: 16px}
+.list-xzk .list-xzk-item .list-xzk-con .con{margin-left: 70px}
+.list-xzk .list-xzk-item .list-xzk-con img{width: 66px;height: 66px;border: 1px solid #ddd}
+.list-xzk .list-xzk-item .server-tag span{padding: 0 5px;border-radius: 5px;background: #bbb;color: #fff;margin-right: 5px}
+.list-xzk .list-xzk-item .list-xzk-btnBox{position: absolute;right: 0;top: 0;bottom: 0; border-radius: 0;width: 75px;background: #e4e4e4;color: #747474;text-align: center;line-height: 88px;font-size: 15px}
+.list-xzk .list-xzk-item .list-xzk-btnBox.toPay{color: #fff;background: #f07878}
+.list-xzk .list-xzk-item .list-xzk-btnBox.toEvaluate{color: #fff;background: #8bc9a5}
+.list-xzk .list-xzk-item .list-xzk-btnBox.theme{color: #fff;background: #a86dcd;font-size: 20px}
+.list-xzk .list-xzk-item .list-xzk-btnBox.theme em{font-style: normal;font-size: 12px}
+.list-xzk .list-item-130{height: auto;line-height: 16px}
+.list-xzk .list-item-130 img{width:50px;height: 50px;border-radius: 100%}
+.list-xzk .list-item-130 h4{margin-bottom: 0}
+.list-xzk .list-item-130 .item-con-130{margin-left:60px;margin-right:80px}
+.list-xzk .list-item-130 .messBtn{padding:12px 6px;font-size: 14px;margin-top: 6px}
+.list-xzk .list-item-130 .messBtn.theme{border: 1px solid #a86dcd;color: #a86dcd;background: #fff}
+.btn.theme{padding:12px 15px;color: white;font-size: 18px; background: #a86dcd;border: 0;margin-top:5px}
+

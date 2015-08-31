@@ -1,0 +1,146 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,  initial-scale=1.0, maximum-scale=1.0,  user-scalable=no"><!---缩放比例设置，禁止用户缩放-->
+    <meta name="format-detection" content="telephone=no" /><!---忽略页面中的数字识别为电话号码-->
+    <meta name="apple-mobile-web-app-capable" content="yes" /><!---网站开启对 web app 程序的支持-->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" /><!--改变顶部状态条的颜色-->
+    <title>小租租客</title>
+    <link rel="stylesheet" href="css/ratchet.min.css"/>
+    <link rel="stylesheet" href="css/common/common.css"/>
+    <link rel="stylesheet" href="css/common/composition.css"/>
+    <link rel="stylesheet" href="css/page/orderDetails.css">
+</head>
+<body>
+<header class="bar bar-nav login_bar">
+    <h1 class="title">预约详情</h1>
+</header>
+<div class="content">    
+    <div id="focus" class="focus">
+        <div class="head-line"><img src="images/head-line.png" alt=""></div>
+        <div class="bd">
+            <ul>
+                <li><img src="images/slide-img.jpg"></li>
+                <li><img src="images/slide-img.jpg"></li>
+                <li><img src="images/slide-img.jpg"></li>
+            </ul>
+        </div>
+        <div class="hd">
+            <ul>
+                <li class="on"></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>        
+        <div class="bottom-line"><img src="images/bottom-line.png" alt=""></div>
+    </div> 
+    <div class="order-info">
+            <div class="head-info">
+                <div class="order-per">
+                    <span class="pic"><img src="images/user-img.jpg" alt=""></span>
+                    <span class="name f15 c_47">无忧保姆</span>
+                    <span class="sex woman f12 c_fff"></span>
+                </div>
+                <ul class="order-item f12">
+                    <li class="bg_be c_fff">扫地</li>
+                    <li class="bg_be c_fff">擦窗户</li>
+                    <li class="bg_be c_fff">洗衣</li>
+                </ul>  
+                <div class="all-time">
+                    <span class="num f15">50.00</span>
+                    <span class="unit f12">小时</span>
+                </div>            
+            </div>  
+            <ul class="info-list f14 c_74 clear">
+                <li class="clear"><span class="">服务时间：</span><span class="r-con fr fb">10:00-14:00</span></li>
+                <li class="clear"><span class="">服务地点：</span><span class="r-con fr">高新区</span></li>
+                <li class="clear"><span class="">联系电话：</span><span class="r-con fr fb">135247858</span></li>
+                <li class="clear"><span class="">预留信息：</span><span class="r-con fr fb">135247858</span></li>
+            </ul>
+    </div> 
+    <div class="order-btn bg_f1 plr20">
+        <button id="orderBtn" class="btn btn-block btn-theme">直接预约</button>
+    </div>  
+    <div class="order-eval">
+        <div class="head f14 c_74 clear">
+            <span class="eval-num">服务评价(<em class="c_ab7">68</em>)</span>
+            <span class="fraction fr"><strong>4.5</strong>分</span>
+            <ul class="stars fr">
+                <li class="checked"></li>
+                <li class="checked"></li>
+                <li class="checked"></li>
+                <li class="checked"></li>
+                <li></li>
+            </ul>
+        </div>
+        <ul class="eval-list">
+            <li class="clear">
+                <span class="per-img fl"><img src="images/slide-img.jpg" alt=""></span>
+                <div class="eval-info clear">
+                    <ul class="stars">
+                        <li class="checked"></li>
+                        <li class="checked"></li>
+                        <li class="checked"></li>
+                        <li class="checked"></li>
+                        <li></li>
+                    </ul> 
+                    <span class="time f12 c_bbb fr">2015-08-12</span>
+                    <span class="eval-name f12 c_bbb fr">天上的菊美</span>                   
+                </div>
+                <p class="eval-con f14 c_74">服务很好，清理得干净，赞！</p>
+            </li>
+            <li class="clear">
+                <span class="per-img fl"><img src="images/slide-img.jpg" alt=""></span>
+                <div class="eval-info clear">
+                    <ul class="stars">
+                        <li class="checked"></li>
+                        <li class="checked"></li>
+                        <li class="checked"></li>
+                        <li class="checked"></li>
+                        <li></li>
+                    </ul> 
+                    <span class="time f12 c_bbb fr">2015-08-12</span>
+                    <span class="eval-name f12 c_bbb fr">天上的菊美</span>                   
+                </div>
+                <p class="eval-con f14 c_74">服务很好，清理得干净，赞！</p>
+            </li>
+            <li class="clear">
+                <span class="per-img fl"><img src="images/slide-img.jpg" alt=""></span>
+                <div class="eval-info clear">
+                    <ul class="stars">
+                        <li class="checked"></li>
+                        <li class="checked"></li>
+                        <li class="checked"></li>
+                        <li class="checked"></li>
+                        <li></li>
+                    </ul> 
+                    <span class="time f12 c_bbb fr">2015-08-12</span>
+                    <span class="eval-name f12 c_bbb fr">天上的菊美</span>                   
+                </div>
+                <p class="eval-con f14 c_74">服务很好，清理得干净，赞！</p>
+            </li>                        
+        </ul>
+        <p class="load-hint f14 c_bbb">上拉加载更多</p>
+    </div>
+</div>
+<div id="Popup" class="popup fade">
+    <div class="con bg_f">
+        <p class="popup-name f14 c_74">预约到达时间</p>
+        <div class="ydt"><input type="text" placeholder="年/月/日"></div>
+        <div class="time-interval f14 c_74 clear">
+            <span class="fl"><input type="text" placeholder="0:00"></span>到
+            <span class="fr"><input type="text" placeholder="0:00"></span>
+        </div>
+        <button class="btn btn-block btn-theme">确定</button>
+    </div>
+</div>
+    <script type="text/javascript" src="scripts/frame/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="scripts/frame/template.js"></script>
+    <script type="text/javascript" src="scripts/common/Global.js"></script>
+    <script type="text/javascript" src="scripts/common/common.js"></script>
+    <script type="text/javascript" src="scripts/frame/TouchSlide.1.1.js"></script>
+    <script type="text/javascript" src="scripts/page/orderDetails.js"></script>
+</body>
+
+</html>

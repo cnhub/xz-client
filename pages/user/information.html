@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,  initial-scale=1.0, maximum-scale=1.0,  user-scalable=no"><!---缩放比例设置，禁止用户缩放-->
+    <meta name="format-detection" content="telephone=no" /><!---忽略页面中的数字识别为电话号码-->
+    <meta name="apple-mobile-web-app-capable" content="yes" /><!---网站开启对 web app 程序的支持-->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" /><!--改变顶部状态条的颜色-->
+    <title>小租租客</title>
+    <link rel="stylesheet" href="../../css/ratchet.min.css"/>
+    <link rel="stylesheet" href="../../css/common/common.css"/>
+    <link rel="stylesheet" href="../../css/common/composition.css"/>
+    <!--<link rel="stylesheet" href="../../css/page/register.css"/>-->
+    <style>
+        .formBox .item label{line-height: 44px;margin-right: 10px;color: #666}
+    </style>
+</head>
+<body>
+<header class="bar bar-nav login_bar">
+    <a class="icon icon-left-nav pull-left"></a>
+    <a class="icon icon-check pull-right" id="registerSub"></a>
+    <h1 class="title">完善资料</h1>
+</header>
+<div class="content bg_none">
+    <form action="" id="login_form">
+        <div class="formBox">
+            <div class="item">
+                <input type="text" name="username" placeholder="昵称"/>
+            </div>
+            <div class="item">
+                <input type="text" name="adr" placeholder="地区"/>
+            </div>
+            <div class="item">
+                <input type="text" name="words" placeholder="交友宣言"/>
+            </div>
+            <div class="item">
+                <input type="text" name="height" placeholder="身高"/>
+            </div>
+            <div class="item">
+                <input type="text" name="weight" placeholder="体重"/>
+            </div>
+            <div class="item">
+                <input type="radio" name="sex" id="sexboy" class="hide"/><label for="sexboy"><span class="icon icon-round"></span> 男</label>
+                <input type="radio" name="sex" id="sexgirl" class="hide"/><label for="sexgirl"><span class="icon icon-round"></span> 女</label>
+            </div>
+            <div class="item">
+                <input type="radio" name="status" id="status_1" class="hide"/><label for="status_1"><span class="icon icon-round"></span> 未婚</label>
+                <input type="radio" name="status" id="status_2" class="hide"/><label for="status_2"><span class="icon icon-round"></span> 已婚</label>
+                <input type="radio" name="status" id="status_3" class="hide"/><label for="status_3"><span class="icon icon-round"></span> 离异</label>
+            </div>
+            <div class="item">
+                <input type="checkbox" name="interest" id="interest_1" class="hide"/><label for="interest_1"><span class="icon icon-round"></span> 唱歌</label>
+                <input type="checkbox" name="interest" id="interest_2" class="hide"/><label for="interest_2"><span class="icon icon-round"></span> 看电影</label>
+                <input type="checkbox" name="interest" id="interest_3" class="hide"/><label for="interest_3"><span class="icon icon-round"></span> 摄影</label>
+            </div>
+        </div>
+        <div class="tc mt30 c_fff">
+            性别设置后不能更改，请谨慎提交
+        </div>
+    </form>
+</div>
+<!--<form action="">-->
+    <!--<div class="popBtns">-->
+        <!--<div class="btns_bd">-->
+            <!--<ul class="table-view tc">-->
+                <!--<li class="table-view-cell">摄像头</li>-->
+                <!--<li class="table-view-cell table-view-cell">手机相册</li>-->
+                <!--<li class="table-view-cell c_94">取消</li>-->
+            <!--</ul>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</form>-->
+
+</body>
+<script type="text/javascript" src="../../scripts/frame/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="../../scripts/frame/template.js"></script>
+<script type="text/javascript" src="../../scripts/common/Global.js"></script>
+<script type="text/javascript" src="../../scripts/common/common.js"></script>
+<script type="text/javascript" src="../../scripts/page/login.js"></script>
+</html>

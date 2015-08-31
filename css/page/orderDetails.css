@@ -1,0 +1,48 @@
+.focus{position: relative;}
+.focus .head-line{position: absolute;width:100%;top:0;left:0;z-index: 10;}
+.focus .bottom-line{position: absolute;width:100%;bottom:0;left:0;z-index: 10px;}
+.focus .head-line img,.focus .bottom-line img{width: 100%;}
+.focus .hd{position: absolute;width:100%;height:18px;bottom: 0;text-align: center;z-index: 11;}
+.focus .hd ul{display:inline-block; height:7px; padding:5px;}
+.focus .hd ul li{ display:inline-block; width:7px; height:7px; -webkit-border-radius:7px; -moz-border-radius:7px; border-radius:7px; background:#8C8C8C; margin:0 5px;  vertical-align:top; overflow:hidden;background-color: #dcc5eb;   }
+.focus .hd ul .on{ background:#a86dcd;  }
+.focus .bd li img{width:100%;}
+.order-info .head-info{position: relative;padding-left: 12px;height: 70px;} 
+.order-info .order-per{height:24px;}
+.order-info .order-per span{display: inline-block;vertical-align: middle;}
+.order-info .order-per .pic{width:24px;height:24px;border: 1px solid #dbdcdd;border-radius: 24px;overflow: hidden;}
+.order-info .order-per .pic img{width: 100%;}
+.order-info .order-per .name{padding:0 7px;line-height: 25px;}
+.order-info .order-per .sex{width: 14px;height: 14px;border-radius: 14px;text-align:center;line-height:14px;}
+.order-info .order-per .sex.woman{background-color: #e58cc7;}
+.order-info .order-item{padding-left: 31px;margin-top: 5px;}
+.order-info .order-item li{display:inline;padding:0 8px 1px;line-height: 14px;margin-right: 10px;border-radius: 15px;}
+.order-info .all-time{width:52px;height:52px;position: absolute;top:5px;right:12px;border-radius:52px;background-color:#ab73cf;color:#fff;}
+.order-info .all-time .num{display: block;line-height:15px;margin-top:14px;font-weight: bold;text-align: center;}
+.order-info .all-time .unit{display: block;line-height:16px;text-align: center;}
+.order-info .info-list{line-height:40px;}
+.order-info .info-list li{height:40px;padding:0 12px;border-top:1px solid #e4e4e4;}
+.order-btn{padding: 12px 16px;}
+.order-btn .btn{margin-bottom:0;}
+.order-eval .head{height:50px;padding: 0 12px;line-height: 50px;}
+.order-eval .head em{font-style: normal;}
+.order-eval .head .stars{margin: 19px 25px 0 19px;}
+.order-eval .eval-list > li{height:80px;padding:20px 12px;border-bottom: 1px solid #dbdcdd;}
+.order-eval .eval-list > li:first-child{border-top: 1px solid #dbdcdd;}
+.order-eval .eval-list .per-img{width:40px;height:40px;border-radius: 40px;overflow: hidden;}
+.order-eval .eval-list .per-img img{width: 100%;height: 100%;}
+.order-eval .eval-list .eval-info{padding-top:2px;height: 15px;line-height: 12px;}
+.order-eval .eval-list .eval-info,.order-eval .eval-list .eval-con{padding-left:7px;overflow: hidden;}
+.order-eval .eval-list .eval-con{margin-top: 6px;}
+.order-eval .eval-list .eval-name{margin-right: 10px;}
+.order-eval .load-hint{margin-top: 18px;text-align: center;}
+
+/*弹出框*/
+.popup{position:fixed;width:100%;height:100%;background: rgba(0,0,0,.5);z-index: 1000;}
+.popup.fade{display: none;}
+.popup .con{position:absolute;width:78%;padding:10px;top:45%;left:50%;margin:-75px 0 0 -39%;border-radius: 5px;}
+.popup .ydt,.popup .time-interval{margin-top: 10px;}
+.popup .time-interval{text-align: center;line-height: 35px;}
+.popup .time-interval > span{width:40%;}
+.popup .btn{margin: 12px 0 0;}
+.popup input{height:35px;border: 1px solid #ddd;}

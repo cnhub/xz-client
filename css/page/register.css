@@ -1,0 +1,28 @@
+.phoneCodeBd{
+    position: relative;
+}
+.phoneCodeBd input{
+    width: 50%;
+}
+.phoneCodeBd .codeBtn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    line-height: 44px;
+    width: 50%;
+    border-left: 1px solid #d9d9d9;
+}
+.codeBtn.clickMark span{
+    display: block;
+}
+.codeBtn.clickMark span:first-child{
+    display: none;
+}
+.icon-roundcheckfill{
+    font-size: 18px;
+    /*color: #bfbfbf;*/
+}
+.icon-roundcheckfill.active{
+    color: #a86dcd;
+}
