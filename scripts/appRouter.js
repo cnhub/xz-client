@@ -25,7 +25,7 @@ define(['backbone', 'views/loginView'],
             $(page.el).attr('data-role', 'page');
             page.render();
             var body = $('body');
-            body.append($(page.el));
+            body.html($(page.el));
 
             // if(body.find('.gf-footer').length <= 0){
             //     body.append(_.template(footer));
