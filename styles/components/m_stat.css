@@ -1,0 +1,80 @@
+/***************************************************
+* feature  :  评论统计模块;
+* update   :  2015/02/03;
+* use      :  .m-stat;
+* extend   :  ;
+* example  :  ;
+* desc     :  ;
+* feedback :  此处填入 issue, 并请附带以下信息[os_version, browser_version, page_path, issue_description]
+*          -  demo => [windows 7, IE 8, http://diligrp.com/icon.html, 在不定height下未能垂直居中];
+****************************************************/
+/***************************************************
+* feature  :  变量配置;
+* update   :  2015/02/05;
+* use      :  ;
+* extend   :  ;
+* example  :  ;
+* desc     :  ;
+* feedback :  此处填入 issue, 并请附带以下信息[os_version, browser_version, page_path, issue_description]
+*          -  demo => [windows 7, IE 8, http://diligrp.com/icon.html, 在不定height下未能垂直居中];
+****************************************************/
+.bg-img {
+  background: url('../../images/icon/icon.png') no-repeat;
+  background-size: 150px;
+}
+.m-stat {
+  padding: 12px 0 12px 90px;
+  background-color: #fff;
+}
+.m-stat .rate {
+  font-size: 12px;
+  color: #666;
+  text-align: center;
+  float: left;
+  margin-left: -58px;
+  margin-top: 0;
+}
+.m-stat .rate em {
+  font-style: normal;
+  font-size: 18px;
+  color: #FF9D2C;
+}
+.m-stat ul {
+  width: 100%;
+}
+.m-stat li {
+  width: 100%;
+  font-size: 10px;
+  color: #666;
+  box-sizing: border-box;
+  padding: 0 50px;
+  overflow: hidden;
+  position: relative;
+}
+.m-stat li .text {
+  float: left;
+  margin-left: -50px;
+  text-align: right;
+  width: 70px;
+  margin-right: 15px;
+}
+.m-stat li .progress {
+  display: block;
+  background-color: #ddd;
+  height: 10px;
+  font-size: 0;
+  margin-top: 3px;
+}
+.m-stat li .progress span {
+  display: block;
+  height: 100%;
+  background-color: #ff9d2c;
+}
+.m-stat li .percent {
+  position: absolute;
+  right: 4px;
+  top: 0;
+  text-align: left;
+  width: 36px;
+  margin-left: 10px;
+}

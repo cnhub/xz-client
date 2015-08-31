@@ -1,0 +1,84 @@
+
+@import "var";
+/*
+	@ m-imguploader.less
+	@ 图片上传组件
+*/
+
+.img-upload-button {
+    // display: inline-block;
+    /*or inline-block*/
+    // width: 62px;
+    // height: 62px;
+    padding: 0;
+    text-align: center;
+    cursor: pointer;
+    z-index: 1;
+    overflow: hidden;
+	//background: url("@{imgURI}upload.png") -121px 0px no-repeat;
+    width: 63px;
+  	height: 63px;
+  	float: left;
+  	border: 1px dashed #ddd;
+   // background-size: 75px;
+   // margin: 17px;
+}
+.img-upload-disabled{
+	display: none;
+}
+.img-upload-button span {
+	// display: none !important;
+	background: url("@{imgURI}upload.png") -48px 0px no-repeat;
+    width: 30px;
+    height: 30px;
+    overflow: hidden;
+    display: inline-block;
+    text-indent: -9990px;
+    background-size: 75px;
+    margin: 17px;
+}
+
+.img-upload-list {
+	list-style: none;
+	display: inline-table;
+}
+.img-upload-list:after {
+	// content: ".";
+	// display: block;
+	// height: 0;
+	// clear: both;
+	// visibility: hidden;
+}
+
+.img-upload-list {
+	// position: absolute;
+	// z-index: 0;
+	// // width: 45px;
+	// // height: 45px;
+	// left: 0;
+	// top: 0;
+	float: left;
+	li{
+		position: relative;
+	}
+}
+.img-upload-list img {
+	width: 62px;
+	height: 62px;
+}
+.img-upload-list .img-upload-remove {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	display: block;
+	width: 22px;
+	height: 22px;
+	z-index: 99;
+	background: url("../../images/upload.png") -13px -12px no-repeat;
+	background-size: 75px;
+}
+
+.img-upload-error {
+	font-size: 12px;
+	color: #ff0000;
+}

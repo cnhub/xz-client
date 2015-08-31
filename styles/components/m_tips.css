@@ -1,0 +1,20 @@
+.m-tips {
+  padding: 20px 15px;
+  min-height: 70px;
+}
+.m-tips .pic {
+  float: left;
+  width: 70px;
+  height: 70px;
+  margin-right: 10px;
+}
+.m-tips h3 {
+  font-size: 16px;
+  color: #FF9D2C;
+  margin-bottom: 8px;
+  font-weight: 400;
+}
+.m-tips p {
+  font-size: 12px;
+  color: #999;
+}

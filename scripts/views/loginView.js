@@ -10,18 +10,18 @@ define(['backbone', 'text!templates/login.html', 'models/login'], function(Backb
 			return this;
 		},
 		login:function(e){
+			var _this = this;
 			e.preventDefault();
 			var model = new LoginModel({
-					phone: $.trim($('#name').val()), 
-					pwd: $.trim($('#pwd').val())
+					mobilenumber: $.trim(_this.$el.find('#phone').val()), 
+					password: $.trim(_this.$el.find('#pwd').val())
 				});
 			model.save({
-				apiName:'Home/Login/login_interface',
+				apiName:'User/Authentication.ashx',
 				success:function(response){
 					localStorage.clear();
-					localStorage.setItem('phone', model.get('phone'));
-					localStorage.setItem('password', model.get('pwd'));
-
+					localStorage.setItem('mobilenumber', model.get('mobilenumber'));
+					localStorage.setItem('password', model.get('password'));
 					localStorage.setItem('uid', response.uid);
 					app.navigate('#home', {trigger: true});
 			    },

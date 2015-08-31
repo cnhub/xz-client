@@ -1,25 +1,27 @@
-﻿<link rel="stylesheet" href="css/ratchet.min.css"/>
-<link rel="stylesheet" href="css/common/common.css"/>
-<link rel="stylesheet" href="css/common/composition.css"/>
-<link rel="stylesheet" href="css/page/login.css"/>
-<header class="bar bar-nav login_bar">
-    <a class="icon icon-check pull-right" id="loginSub"></a>
-    <h1 class="title">登录</h1>
+﻿<link rel="stylesheet" href="css/ratchet.min.css" />
+<link rel="stylesheet" href="css/common/common.css" />
+<link rel="stylesheet" href="css/common/composition.css" />
+<link rel="stylesheet" href="css/page/login.css" />
+<!-- header -->
+<header class="m-header">
+    <div class="head">
+        <h1>登录</h1>
+    </div>
+    <a href="#" class="rt-bar" id="submit"><span class="text">登录</span></a>
 </header>
-<div class="content bg_none">
+<div class="m-content">
     <div class="formBox">
         <form action="" id="login_form">
             <div class="item">
-                <input type="text" name="phone" placeholder="手机号码"/>
+                <input type="tel" name="phone" placeholder="手机号码" id="phone" />
             </div>
             <div class="item">
-                <input type="password" name="pwd" placeholder="密码"/>
+                <input type="password" name="pwd" placeholder="密码" id="pwd" />
             </div>
         </form>
     </div>
     <div class="linkOther">
-        <a href="pages/user/register.html" class="fl c_fff f17">注册</a>
-        <a href="pages/user/findPassword.html" class="fr c_fff f17">找回密码</a>
+        <a href="#register" class="fl c_fff f17">注册</a>
+        <a href="#findPassword" class="fr c_fff f17">找回密码</a>
     </div>
-
 </div>

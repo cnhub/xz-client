@@ -1,0 +1,66 @@
+/***************************************************
+* feature  :  popup;
+* update   :  2015/02/03;
+* use      :  .m-popup;
+* extend   :  ;
+* example  :  ;
+* desc     :  ;
+* feedback :  此处填入 issue, 并请附带以下信息[os_version, browser_version, page_path, issue_description]
+*          -  demo => [windows 7, IE 8, http://diligrp.com/icon.html, 在不定height下未能垂直居中];
+****************************************************/
+@import "var";
+
+.m-popup{
+	position: fixed;
+	right: 0;
+	left: 50%;
+	bottom: 0;
+	width: 270px;
+	margin-left: -135px;
+	background: rgba(255, 255, 255, .9);
+	border-radius: 4px;
+	z-index: 20;
+	-webkit-transition: -webkit-transform cubic-bezier(0.22, 0.61, 0.36, 1) .2s;
+	-moz-transition: -moz-transform cubic-bezier(0.22, 0.61, 0.36, 1) .2s;
+	-o-transition: -o-transform cubic-bezier(0.22, 0.61, 0.36, 1) .2s;
+	transition: transform cubic-bezier(0.22, 0.61, 0.36, 1) .2s;
+	&.popup-large{
+		left: 25px;
+		right: 25px;
+		width: auto;
+		margin-left: 0;
+	}
+	.popup-head{
+		h1{
+			font-size: 14px;
+			color: #000;
+			line-height: 50px;
+			text-align: center;
+			font-weight: 400;
+		}
+	}
+	.popup-cont{
+		.title{
+			color: #666;
+		}
+		.m-table-view{
+			margin-top: 0;
+			background: none;
+		}
+	}
+
+	.popup-foot{
+		.m-btn{
+			float: left;
+			width: 50%;
+			background: none;
+			color: #027aff;
+			box-sizing: border-box;
+			border-radius: 0;
+			border: none;
+			&:first-child{
+				border-right: 1px solid #ddd;
+			}
+		}
+	}
+}

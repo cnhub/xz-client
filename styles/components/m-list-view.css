@@ -1,0 +1,82 @@
+/*
+ * list css
+ * Code at 2015/01/27
+ * by van
+ */
+/***************************************************
+* feature  :  变量配置;
+* update   :  2015/02/05;
+* use      :  ;
+* extend   :  ;
+* example  :  ;
+* desc     :  ;
+* feedback :  此处填入 issue, 并请附带以下信息[os_version, browser_version, page_path, issue_description]
+*          -  demo => [windows 7, IE 8, http://diligrp.com/icon.html, 在不定height下未能垂直居中];
+****************************************************/
+.bg-img {
+  background: url('../../images/icon/icon.png') no-repeat;
+  background-size: 150px;
+}
+.list-view {
+  border-top: 1px solid #ddd;
+}
+.list-view li {
+  border-bottom: 1px solid #ddd;
+  padding: 13px 0;
+  background: #fff;
+}
+.list-view li.on {
+  background: #eee;
+}
+.list-view .in-block {
+  display: inline-block;
+  vertical-align: middle;
+}
+.list-view .as-block {
+  display: block;
+}
+/* 普通类表内容样式 */
+.list-view img {
+  width: 80px;
+  height: 80px;
+  margin: 0 15px;
+}
+.list-view .info {
+  height: 36px;
+  overflow: hidden;
+  margin: 0 10px 25px 0;
+}
+.from,
+.price {
+  margin-right: 15px;
+}
+.price {
+  color: #fa4545;
+  font-size: 16px;
+  float: left;
+}
+.from {
+  color: #999;
+  font-size: 12px;
+  float: right;
+}
+.img-link {
+  float: left;
+}
+.go-kinds,
+.go-detail {
+  display: block;
+  width: 50px;
+  padding: 51px 20px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  text-align: right;
+}
+.go-kinds i,
+.go-detail i {
+  display: inline-block;
+  width: 10px;
+  height: 16px;
+  background-position: -31px -236px;
+}

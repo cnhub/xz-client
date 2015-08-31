@@ -1,0 +1,77 @@
+/***************************************************
+* feature  :  商品详情页，阶梯价格;
+* update   :  2015/02/03;
+* use      :  ;
+* extend   :  ;
+* example  :  ;
+* desc     :  ;
+* feedback :  此处填入 issue, 并请附带以下信息[os_version, browser_version, page_path, issue_description]
+*          -  demo => [windows 7, IE 8, http://diligrp.com/icon.html, 在不定height下未能垂直居中];
+****************************************************/
+@import "var";
+
+//阶梯价格
+.m-step{
+	overflow: hidden;
+	position: relative;
+	padding: 11px 0;
+	// &:before, &:after{
+	// 	content: '';
+	// 	position: absolute;
+	// 	left: 0;
+	// 	right: 6px;
+	// 	top: 50%;
+	// 	height: 3px;
+	// 	background-color: #ddd;
+	// 	margin-top: -1px;
+	// }
+
+	&:after{
+		left: auto;
+		right: -4px;
+		border: 8px solid #ddd;
+		border-color: transparent transparent transparent #ddd;
+		background: none;
+		width: 0;
+		height: 0;
+		margin-top: -7px;
+		font-size: 0;
+	}
+
+	li{
+		float: left;
+		text-align: left;
+		padding: 0 5px;
+		position: relative;
+		// width: 33.3%;
+		min-width: 85px;
+		box-sizing: border-box;
+		// &:before{
+		// 	content: '';
+		// 	position: absolute;
+		// 	width: 7px;
+		// 	height: 7px;
+		// 	border: 2px solid #FFF;
+		// 	background-color: #DDD;
+		// 	font-size: 0;
+		// 	overflow: hidden;
+		// 	top: 50%;
+		// 	// margin-left: -2px;
+		// 	margin-top: -5px;
+		// 	border-radius: 50%;
+		// 	box-shadow: 0 0 1px #ddd;
+		// }
+	}
+	.desc, .price{
+		font-size: 14px;
+		color: #6c2;
+		display: block;
+		padding-bottom: 8px;
+	}
+	.price{
+		font-size: 18px;
+		font-style: normal;
+		padding: 0;
+		line-height: 1.1;
+	}
+}

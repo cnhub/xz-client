@@ -6,10 +6,12 @@ define(['jquery'], function(){
 		    that = this;
 		    url = this.base + opt.apiName;
 		    type = opt.type ? opt.type : 'GET';
+		    var loading = '<div class="m-loading"><ul><li></li><li></li><li></li></ul></div>';
+		    loading = $(loading).appendTo($('body'));
+
 		    $.ajax({
 		        type: type,
 		        url: url,
-		        async: true,
 		        data: opt.data,
 		        timeout: 30000,
 		        dataType: 'json'
@@ -23,7 +25,6 @@ define(['jquery'], function(){
 		        loading.remove();
 		    }).fail(function(xhr, ajaxOptions, thrownError) {
 		        // console.log(arguments);
-		        // that.loading.hide();
 		        loading.remove();
 		        alert('error code: ' + xhr.status + '\n ajaxOptions:' + ajaxOptions + '\n message: ' + thrownError + '\n APIName:' + opt.apiName);
 		    });

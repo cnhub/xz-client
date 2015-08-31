@@ -1,0 +1,68 @@
+/***************************************************
+* feature  :  swipe.js的图片滑动组件;
+* update   :  2015/02/03;
+* use      :  ;
+* extend   :  ;
+* example  :  ;
+* desc     :  ;
+* feedback :  此处填入 issue, 并请附带以下信息[os_version, browser_version, page_path, issue_description]
+*          -  demo => [windows 7, IE 8, http://diligrp.com/icon.html, 在不定height下未能垂直居中];
+****************************************************/
+/***************************************************
+* feature  :  变量配置;
+* update   :  2015/02/05;
+* use      :  ;
+* extend   :  ;
+* example  :  ;
+* desc     :  ;
+* feedback :  此处填入 issue, 并请附带以下信息[os_version, browser_version, page_path, issue_description]
+*          -  demo => [windows 7, IE 8, http://diligrp.com/icon.html, 在不定height下未能垂直居中];
+****************************************************/
+.bg-img {
+  background: url('../../images/icon/icon.png') no-repeat;
+  background-size: 150px;
+}
+.m-slider {
+  position: relative;
+  height: 220px;
+  width: 100%;
+  color: #333;
+  text-align: center;
+  line-height: 23px;
+  font-size: 14px;
+}
+.m-slider .slider-wrap {
+  width: 100%;
+  overflow: hidden;
+  height: 100%;
+  position: relative;
+}
+.m-slider .slider-wrap div {
+  position: relative;
+  float: left;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+.m-slider .page-contrl {
+  float: left;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: -16px;
+  text-align: center;
+}
+.m-slider .page-contrl li {
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  background: #d3d3d3;
+  border-radius: 50%;
+  margin-right: 4px;
+}
+.m-slider .page-contrl li:last-child {
+  margin-right: 0;
+}
+.m-slider .page-contrl li.on {
+  background: #00b4af;
+}
