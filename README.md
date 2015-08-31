@@ -1,4 +1,4 @@
-[![小租客户端APP](https://help.github.com/assets/images/site/set-up-git.gif=100x20)](http://cnhub.github.io/xz-client/)
+[![小租客户端APP](https://help.github.com/assets/images/site/set-up-git.gif)](http://cnhub.github.io/xz-client/)
 
 # This branch is master.
 You can control the step with develop as you like,
