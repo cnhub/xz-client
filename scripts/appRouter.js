@@ -1,9 +1,10 @@
-define(['backbone', 'views/loginView'], 
-    function(Backbone, LoginView) {
+define(['backbone', 'views/loginView','views/registerView'], 
+    function(Backbone, LoginView, registerView) {
     return Backbone.Router.extend({
         routes: {
             "": "login",
-            "login": "login"
+            "login": "login",
+            "register":"register"
         },
         initialize:function(){
             $(document).on('click', '.back', function(event) {

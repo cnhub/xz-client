@@ -23,6 +23,7 @@ define(['backbone', 'text!templates/login.html', 'models/login'], function(Backb
 					localStorage.setItem('mobilenumber', model.get('mobilenumber'));
 					localStorage.setItem('password', model.get('password'));
 					localStorage.setItem('uid', response.uid);
+					alert('登录成功！');
 					app.navigate('#home', {trigger: true});
 			    },
 			    error:function(){
