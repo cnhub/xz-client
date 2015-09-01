@@ -67,18 +67,6 @@ define(['jquery'], function(){
 			});
 		},
 		bindEvents:function(){
-			$(document).on('click', 'a', function(e){
-				var href = $(this).attr('href');
-				if(href.indexOf('tel:') != -1){
-					e.preventDefault();
-					window.open(href, '_system', 'location=yes');
-					return false;
-				}
-			});
-
-			$(document).on('click', '.gf-tab-bar li', function(e){
-				$(this).addClass('on').siblings().removeClass('on');
-			});
 		},
 		init:function(){
 			this.bindEvents();
