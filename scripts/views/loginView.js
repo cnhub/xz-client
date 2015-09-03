@@ -17,7 +17,6 @@ define(['backbone', 'text!templates/login.html', 'models/login'], function(Backb
 					password: $.trim(_this.$el.find('#pwd').val())
 				});
 			model.save({
-				apiName:'User/Authentication.ashx',
 				success:function(response){
 					localStorage.clear();
 					localStorage.setItem('mobilenumber', model.get('mobilenumber'));

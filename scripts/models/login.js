@@ -1,22 +1,19 @@
-define(['backbone'], function(Backbone){
+define(['backbone', 'regs'], function(Backbone, Regs){
 	return Backbone.Model.extend({
+		url : 'User/Authentication.ashx',
 		initialize:function(){
 			this.on("invalid",function(model,error){
 	            alert(error);
 	        });
 		},
 		validate:function(attributes){
-	        if(attributes.name == '') {
-	            return "手机号不能为空！";
+	        if(!Regs.phone.test(attributes.mobilenumber)) {
+	            return "手机号为空或格式不正确！";
 	        }
 
-	        if(attributes.pwd == '') {
-	            return "密码不能为空！";
+	        if(attributes.password == '' || attributes.password.length < 6) {
+	            return "密码为6-18位字符，请检查！";
 	        }
-	    },
-	    save:function(opt){
-	    	opt.data = this.attributes;
-	    	window.Common.sendToServer(opt);
 	    }
 	});
 });

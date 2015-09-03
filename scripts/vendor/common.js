@@ -2,9 +2,9 @@ define(['jquery'], function(){
 	var Common = {
 		base : 'http://xiaozuapi.dylkj.cn/API/',
 		sendToServer: function(opt) {
-		    var url, type, that;
-		    that = this;
-		    url = this.base + opt.apiName;
+		    var url, type, _this;
+		    _this = this;
+		    url = this.base + opt.url;
 		    type = opt.type ? opt.type : 'GET';
 		    var loading = '<div class="m-loading"><ul><li></li><li></li><li></li></ul></div>';
 		    loading = $(loading).appendTo($('body'));
@@ -24,7 +24,6 @@ define(['jquery'], function(){
 		        }
 		        loading.remove();
 		    }).fail(function(xhr, ajaxOptions, thrownError) {
-		        // console.log(arguments);
 		        loading.remove();
 		        alert('error code: ' + xhr.status + '\n ajaxOptions:' + ajaxOptions + '\n message: ' + thrownError + '\n APIName:' + opt.apiName);
 		    });

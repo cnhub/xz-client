@@ -7,7 +7,8 @@ requirejs.config({
         text:'vendor/text',
         swipe: 'vendor/swipe',
         fastclick: 'vendor/fastclick',
-        common: 'vendor/common'
+        common: 'vendor/common',
+        regs: 'vendor/regs'
     },
     shim:{
         underscore:{
