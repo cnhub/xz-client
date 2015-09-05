@@ -1,7 +1,7 @@
 define([], function() {
     var regs = {
         phone: /^1[3|4|5|7|8|9]\d{9}$/,
-        verCode: /^\d{6}$/,
+        verCode: /^\d{4,6}$/,
         realName: /^[\u4E00-\u9FA5\uF900-\uFA2D]{2,10}$/,
         uname: /^([a-z_A-z-\u4E00-\u9FA5\uF900-\uFA2D]+\d*)|(\d*[a-z_A-z-\u4E00-\u9FA5\uF900-\uFA2D]+)$/,
         enterpriceName: /^[\u4E00-\u9FA5\uF900-\uFA2D]{4,50}$/,

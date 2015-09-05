@@ -1,9 +1,12 @@
-define(['backbone', 'regs'], function(Backbone, Regs){
-	return Backbone.Model.extend({
-		url : 'User/Authentication.ashx',
+define(['baseModel', 'regs', 'loading'], function(BaseModel, Regs, Loading){
+	return BaseModel.extend({
+		url: function() {
+		    return this.urlRoot + 'User/Authentication.ashx'
+		},
 		initialize:function(){
 			this.on("invalid",function(model,error){
 	            alert(error);
+	            Loading.hide();
 	        });
 		},
 		validate:function(attributes){

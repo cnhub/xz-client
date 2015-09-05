@@ -2,30 +2,30 @@ define(['jquery'], function(){
 	var Common = {
 		base : 'http://xiaozuapi.dylkj.cn/API/',
 		sendToServer: function(opt) {
+			console.log(arguments);
 		    var url, type, _this;
 		    _this = this;
-		    url = this.base + opt.url;
-		    type = opt.type ? opt.type : 'GET';
 		    var loading = '<div class="m-loading"><ul><li></li><li></li><li></li></ul></div>';
 		    loading = $(loading).appendTo($('body'));
 
-		    $.ajax({
-		        type: type,
-		        url: url,
+		    return $.ajax({
+		        type: opt.type,
+		        url: opt.url,
 		        data: opt.data,
 		        timeout: 30000,
-		        dataType: 'json'
+		        dataType: opt.dataType
 		    }).done(function(response) {
-		        if (response.IsSuccessfully) {
-		            opt.success && opt.success(response);
-		        } else {
-		        	alert(response.ErrorMessage);
-		            opt.error && opt.error(response);
-		        }
-		        loading.remove();
+		        // if (response.IsSuccessfully) {
+		        // 	console.log(opt.success);
+		        //     opt.success && opt.success(response);
+		        // } else {
+		        // 	alert(response.ErrorMessage);
+		        //     opt.error && opt.error(response);
+		        // }
+		        // loading.remove();
 		    }).fail(function(xhr, ajaxOptions, thrownError) {
 		        loading.remove();
-		        alert('error code: ' + xhr.status + '\n ajaxOptions:' + ajaxOptions + '\n message: ' + thrownError + '\n APIName:' + opt.apiName);
+		        // alert('error code: ' + xhr.status + '\n ajaxOptions:' + ajaxOptions + '\n message: ' + thrownError + '\n APIName:' + opt.apiName);
 		    });
 		},
 		formatDate:function(date){

@@ -3,8 +3,10 @@ requirejs.config({
     paths: {
         jquery: 'vendor/jquery-2.1.4.min',
         backbone: 'vendor/backbone-min',
+        baseModel: 'models/base',
         underscore:'vendor/underscore-min',
         text:'vendor/text',
+        loading:'utils/loading',
         swipe: 'vendor/swipe',
         fastclick: 'vendor/fastclick',
         common: 'vendor/common',
@@ -48,7 +50,7 @@ requirejs(['app', 'common'], function(app){
 requirejs.onError = function (err) {
     console.log(err.requireType);
     if (err.requireType === 'timeout') {
-        alert('当前网络不稳定，加载超时，请重试！');
+        alert('加载超时，请重试！');
         console.log('modules: ' + err.requireModules);
     }
     throw err;

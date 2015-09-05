@@ -12,20 +12,20 @@
     <form action="" id="login_form">
         <div class="formBox">
             <div class="item">
-                <input type="text" name="phone"  id="phone" placeholder="手机号码"/>
+                <input type="text" name="phone"  id="phone" maxlength="11" placeholder="手机号码"/>
             </div>
             <div class="item phoneCodeBd">
-                <input type="text" name="code" placeholder="验证码"  id="code"/>
+                <input type="text" name="code" placeholder="验证码" maxlength="6"  id="code"/>
                 <div class="codeBtn c_theme tc" id="getPhoneCode">
                     <span>获取验证码</span>
                     <span class="hide"><em class="num">56</em> '</span>
                 </div>
             </div>
             <div class="item">
-                <input type="password" name="pwd" placeholder="密码 6-30位"  id="pwd"/>
+                <input type="password" name="pwd" placeholder="密码 6-18位" maxlength="18"  id="pwd"/>
             </div>
             <div class="item">
-                <input type="password" name="rePwd" placeholder="再次输入"  id="rePwd"/>
+                <input type="password" name="rePwd" placeholder="再次输入" maxlength="18"  id="rePwd"/>
             </div>
         </div>
         <div class="agree tc mt30 c_fff">
