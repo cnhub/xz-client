@@ -5,8 +5,8 @@ define(['jquery'], function(){
 			console.log(arguments);
 		    var url, type, _this;
 		    _this = this;
-		    var loading = '<div class="m-loading"><ul><li></li><li></li><li></li></ul></div>';
-		    loading = $(loading).appendTo($('body'));
+		    // var loading = '<div class="m-loading"><ul><li></li><li></li><li></li></ul></div>';
+		    // loading = $(loading).appendTo($('body'));
 
 		    return $.ajax({
 		        type: opt.type,
@@ -14,19 +14,20 @@ define(['jquery'], function(){
 		        data: opt.data,
 		        timeout: 30000,
 		        dataType: opt.dataType
-		    }).done(function(response) {
-		        // if (response.IsSuccessfully) {
-		        // 	console.log(opt.success);
-		        //     opt.success && opt.success(response);
-		        // } else {
-		        // 	alert(response.ErrorMessage);
-		        //     opt.error && opt.error(response);
-		        // }
-		        // loading.remove();
-		    }).fail(function(xhr, ajaxOptions, thrownError) {
-		        loading.remove();
-		        // alert('error code: ' + xhr.status + '\n ajaxOptions:' + ajaxOptions + '\n message: ' + thrownError + '\n APIName:' + opt.apiName);
-		    });
+		    })
+			// .done(function(response) {
+		    //     // if (response.IsSuccessfully) {
+		    //     // 	console.log(opt.success);
+		    //     //     opt.success && opt.success(response);
+		    //     // } else {
+		    //     // 	alert(response.ErrorMessage);
+		    //     //     opt.error && opt.error(response);
+		    //     // }
+		    //     // loading.remove();
+		    // }).fail(function(xhr, ajaxOptions, thrownError) {
+		    //     loading.remove();
+		    //     // alert('error code: ' + xhr.status + '\n ajaxOptions:' + ajaxOptions + '\n message: ' + thrownError + '\n APIName:' + opt.apiName);
+		    // });
 		},
 		formatDate:function(date){
 			var today = new Date();

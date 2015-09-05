@@ -5,7 +5,7 @@ define(['jquery'], function(){
 			this.loading = $(template).appendTo($('body'));
 		},
 		hide: function(){
-			this.loading.remove();
+			this.loading && this.loading.remove();
 		}
 	};
 });

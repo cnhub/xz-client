@@ -18,6 +18,8 @@ define(['backbone', 'loading', 'text!templates/changePassword.html', 'models/cha
 				});
 			Loading.show();
 			model.save(null, {
+				data: model.attributes,
+	            cache: false,
 				success:function(model, response, options){
 					if (!response.IsSuccessfully) {
 						alert(response.ErrorMessage);

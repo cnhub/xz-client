@@ -1,0 +1,128 @@
+<link rel="stylesheet" href="css/ratchet.min.css" />
+<link rel="stylesheet" href="css/common/common.css" />
+<link rel="stylesheet" href="css/common/composition.css" />
+<link rel="stylesheet" href="css/page/index.css" />
+<div id="city_bd">
+    <header class="bar bar-nav">
+        <a class="icon icon-close pull-right" id="close_cityList"></a>
+        <h1 class="title">城市列表</h1>
+    </header>
+    <div class="content">
+        <!--定位城市-->
+        <div class="list_item">
+            <span class="city_list_hd">定位</span>
+            <ul class="table-view">
+                <li class="table-view-cell" id="user_defaultCity"></li>
+            </ul>
+        </div>
+        <!--常规城市-->
+        <div class="list_item">
+            <span class="city_list_hd">服务范围</span>
+            <ul class="table-view" id="cityListWraper">
+            </ul>
+        </div>
+    </div>
+</div>
+<header class="bar bar-nav">
+    <a class="nav_lineHeight pull-left nav_city" id="enter_cityList"> <span class="ellipsis" id="user_cityName">定位中</span><i class="icon icon-down"></i></a>
+    <a class="nav_lineHeight icon icon-compose pull-right" href="center/myMessage.html"></a>
+    <div class="nav_searchBd">
+        <form action="">
+            <i class="icon icon-search fl c_fff" id="go_search"></i>
+            <i class="icon icon-close fr c_fff" id="qrCode_search"></i>
+            <span class="icon icon-close fr hide" id="del_searchVal"></span>
+            <div class="sb_i">
+                <input type="search" id="index_search" placeholder="关键字搜索" />
+            </div>
+        </form>
+
+    </div>
+</header>
+<div class="content hasFooter bg_f1">
+    <nav class="bar bar-tab nav-con">
+        <a class="tab-item" href="javascript:void(0)">内容</a>
+        <a class="tab-item" href="javascript:void(0)">价格</a>
+        <a class="tab-item" href="javascript:void(0)">年龄</a>
+        <a class="tab-item" href="javascript:void(0)">身高</a>
+        <a class="tab-item" href="javascript:void(0)">XX</a>
+    </nav>
+    <ul class="index-list mt10 bg_f" onclick="window.location.href='orderDetails.html'">
+        <li class="list-item oh">
+            <img src="" class="fl" alt="" />
+            <div class="tc rightPrice">
+                <div class="price"><span class="c_theme f18">500</span> /小时</div>
+                <span>500m</span>
+            </div>
+            <div class="con">
+                <h4>无忧保姆 <span class="icon icon-close"></span></h4>
+                <div class="tag-list oh">
+                    <span>扫地</span>
+                    <span>洗衣服</span>
+                    <span>洗衣服</span>
+                    <span>洗衣服</span>
+                    <span>洗衣服</span>
+                    <span>洗衣服</span>
+                </div>
+            </div>
+        </li>
+    </ul>
+    <ul class="index-list mt10 bg_f" onclick="window.location.href='orderDetails.html'">
+        <li class="list-item oh">
+            <img src="" class="fl" alt="" />
+            <div class="tc rightPrice">
+                <div class="price"><span class="c_theme f18">500</span> /小时</div>
+                <span>500m</span>
+            </div>
+            <div class="con">
+                <h4>无忧保姆 <span class="icon icon-close"></span></h4>
+                <div class="tag-list oh">
+                    <span>扫地</span>
+                    <span>洗衣服</span>
+                    <span>洗衣服</span>
+                    <span>洗衣服</span>
+                    <span>洗衣服</span>
+                    <span>洗衣服</span>
+                </div>
+            </div>
+        </li>
+    </ul>
+
+    <ul class="index-list mt10 bg_f" onclick="window.location.href='orderDetails.html'">
+        <li class="list-item oh">
+            <img src="" class="fl" alt="" />
+            <div class="tc rightPrice">
+                <div class="price"><span class="c_theme f18">500</span> /小时</div>
+                <span>1.5km</span>
+            </div>
+            <div class="con">
+                <h4>无忧保姆 <span class="icon icon-close"></span></h4>
+                <div class="tag-list oh">
+                    <span>扫地</span>
+                    <span>洗衣服</span>
+                    <span>洗衣服</span>
+                    <span>洗衣服</span>
+                    <span>洗衣服</span>
+                    <span>洗衣服</span>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+<nav class="bar bar-tab">
+    <a class="tab-item active" href="index.html">
+        <span class="icon icon-home"></span>
+        <span class="tab-label">首页</span>
+    </a>
+    <a class="tab-item" href="publish.html">
+        <span class="icon icon-fabu"></span>
+        <span class="tab-label">发布</span>
+    </a>
+    <!--<a class="tab-item" href="nearby.html">
+        <span class="icon icon-location"></span>
+        <span class="tab-label">附近的人</span>
+    </a>-->
+    <a class="tab-item" href="userCenter.html">
+        <span class="icon icon-yonghu"></span>
+        <span class="tab-label">我的</span>
+    </a>
+</nav>

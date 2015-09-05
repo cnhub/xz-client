@@ -42,6 +42,8 @@ define(['backbone', 'loading', 'text!templates/register.html', 'models/register'
 					code:$.trim(_this.$el.find('#code').val())
 				});
 			model.save(null, {
+				data: model.attributes,
+	            cache: false,
 				success:function(model, response, options){
 					localStorage.clear();
 					if (!response.IsSuccessfully) {

@@ -16,7 +16,10 @@ define(['backbone', 'loading', 'text!templates/login.html', 'models/login'], fun
 					mobilenumber: $.trim(_this.$el.find('#phone').val()), 
 					password: $.trim(_this.$el.find('#pwd').val())
 				});
+
 			model.save(null, {
+				data: model.attributes,
+	            cache: false,
 				success:function(model, response, options){
 					localStorage.clear();
 					if (!response.IsSuccessfully) {

@@ -1,8 +1,9 @@
-define(['backbone', 'views/loginView', 'views/registerView', 'views/findPasswordView', 'views/changePasswordView'], 
-    function(Backbone, LoginView, registerView, findPasswordView, changePasswordView) {
+define(['backbone', 'views/homeView', 'views/loginView', 'views/registerView', 'views/findPasswordView', 'views/changePasswordView'], 
+    function(Backbone, HomeView, LoginView, RegisterView, FindPasswordView, ChangePasswordView) {
     return Backbone.Router.extend({
         routes: {
             "": "login",
+            "home": "home",
             "login": "login",
             "register":"register",
             "findPassword": "findPassword",
@@ -18,17 +19,20 @@ define(['backbone', 'views/loginView', 'views/registerView', 'views/findPassword
         index: function() {
             app.navigate('#home', {trigger: true});
         },
+        home: function(){
+            this.changePage(new HomeView());
+        },
         login: function() {
             this.changePage(new LoginView());
         },
         register:function() {
-            this.changePage(new registerView());
+            this.changePage(new RegisterView());
         },
         findPassword: function(){
-            this.changePage(new findPasswordView());
+            this.changePage(new FindPasswordView());
         },
         changePassword: function(){
-            this.changePage(new changePasswordView());
+            this.changePage(new ChangePasswordView());
         },
         changePage: function(page) {
             $(page.el).attr('data-role', 'page');
