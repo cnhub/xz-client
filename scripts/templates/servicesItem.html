@@ -1,0 +1,22 @@
+<%_.each(Services,function(service){%>
+	<ul class="index-list mt10 bg_f" onclick="window.location.href='orderDetails.html'">
+	    <li class="list-item oh">
+	        <img src="<%=service.HeadPicture%>" class="fl" alt="" />
+	        <div class="tc rightPrice">
+	            <div class="price"><span class="c_theme f18"><%=service.UnitPrice%></span> /小时</div>
+	            <span>500m</span>
+	        </div>
+	        <div class="con">
+	            <h4>无忧保姆 <span class="icon icon-close"></span></h4>
+	            <div class="tag-list oh">
+	                <span>扫地</span>
+	                <span>洗衣服</span>
+	                <span>洗衣服</span>
+	                <span>洗衣服</span>
+	                <span>洗衣服</span>
+	                <span>洗衣服</span>
+	            </div>
+	        </div>
+	    </li>
+	</ul>
+<%})%>

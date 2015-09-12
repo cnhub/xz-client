@@ -1,4 +1,4 @@
-define(['backbone', 'loading', 'text!templates/home.html', 'models/home', 'models/address'], function(Backbone, Loading, HomeTmp, HomeModel, AddressModel) {
+define(['backbone', 'loading', 'text!templates/home.html', 'models/home', 'models/address', 'models/workItems', 'models/services'], function(Backbone, Loading, HomeTmp, HomeModel, AddressModel, WorkItemsModel, ServicesModel) {
     return Backbone.View.extend({
         className: 'homePage',
         template: _.template(HomeTmp),
@@ -50,41 +50,8 @@ define(['backbone', 'loading', 'text!templates/home.html', 'models/home', 'model
                     _this.cityData = response.AddressList;
                     _this.$el.find('#cityListWraper').html(_.template(AddressTmp)(response));
                     _this.getPosition();
-                    Loading.hide();
                 },
                 error: function(model, response, options) {
-                    alert('status: ' + response.status + '\nstatusText:' + response.statusText);
-                    Loading.hide();
-                }
-            });
-        },
-        login: function(e) {
-            var _this = this;
-            e.preventDefault();
-            var model = new LoginModel({
-                mobilenumber: $.trim(_this.$el.find('#phone').val()),
-                password: $.trim(_this.$el.find('#pwd').val())
-            });
-            model.save(null, {
-                data: model.attributes,
-                cache: false,
-                success: function(model, response, options) {
-                    localStorage.clear();
-                    if (!response.IsSuccessfully) {
-                        alert(response.ErrorMessage);
-                        return;
-                    }
-                    localStorage.setItem('mobilenumber', model.get('mobilenumber'));
-                    localStorage.setItem('password', model.get('password'));
-                    localStorage.setItem('UserID', response.UserID);
-                    alert('登录成功！');
-                    Loading.hide();
-                    app.navigate('#home', {
-                        trigger: true
-                    });
-                },
-                error: function(model, response, options) {
-                    localStorage.clear();
                     alert('status: ' + response.status + '\nstatusText:' + response.statusText);
                     Loading.hide();
                 }
@@ -92,11 +59,34 @@ define(['backbone', 'loading', 'text!templates/home.html', 'models/home', 'model
         },
         getPosition: function() {
             var _this = this;
-            navigator.geolocation.getCurrentPosition(function(position) {
-                localStorage.setItem('position', position.coords.longitude + ',' + position.coords.latitude);
-                _this.parseAddress();
-            }, function(error) {
-                console.log('code: ' + error.code + '\n' + 'message: ' + error.message + '\n');
+            var geolocation = new BMap.Geolocation();        
+            geolocation.getCurrentPosition(function(r) {
+                Loading.hide();
+                if (this.getStatus() == BMAP_STATUS_SUCCESS) {
+                    console.log('location ok', r.point.lng, r.point.lat);
+                    var Position = localStorage.getItem('Position');
+                    if(Position && Position.length > 0){
+                        Position = JSON.parse(Position);
+                        if(!Position.accuracy || Position.accuracy <= r.accuracy){
+                            _this.getCityIdByName(r.address.city);
+                            console.log('location start updated!');
+                        }else{
+                            console.log('location not necessary updated!');
+                        }
+                    }else{
+                        _this.getCityIdByName(r.address.city);
+                        console.log('last location is empty,current updated!');
+                    }
+                    console.log(r.address.province + ", " + r.address.city + ", " + r.address.district + ", " + r.address.street + ", " + r.address.street_number);
+                    console.log('position', r);
+                    localStorage.setItem('Position', JSON.stringify(r));
+                } else {
+                    console.log('failed' + this.getStatus());
+                    alert('failed' + this.getStatus());
+                    return;
+                }
+            }, {
+                enableHighAccuracy: true
             });
         },
         getCityIdByName: function(name){
@@ -132,5 +122,73 @@ define(['backbone', 'loading', 'text!templates/home.html', 'models/home', 'model
                 }
             });
         },
+        getWorkItems: function(){
+            var _this = this;
+            var model = new WorkItemsModel({});
+            var AddressTmp = '<%_.each(AddressList,function(item){%>\
+                                <li class="table-view-cell" data-id="<%=item.AreaID%>">\
+                                    <%=item.AreaName%>\
+                                </li>\
+                            <%})%>;';
+            model.save(null, {
+                data: model.attributes,
+                cache: false,
+                success: function(model, response, options) {
+                    localStorage.clear();
+                    if (!response.IsSuccessfully) {
+                        alert(response.ErrorMessage);
+                        return;
+                    }
+                    _this.cityData = response.AddressList;
+                    _this.$el.find('#cityListWraper').html(_.template(AddressTmp)(response));
+                    _this.getPosition();
+                },
+                error: function(model, response, options) {
+                    alert('status: ' + response.status + '\nstatusText:' + response.statusText);
+                    Loading.hide();
+                }
+            });
+        },
+        GetServices: function(){
+            var _this = this;
+            var model = new ServicesModel({
+                    pageindex:1,
+                    pagesize:10,
+                    areaID:110000,
+                    unitPriceRange1:0,
+                    unitPriceRange2:0,
+                    ageRange1:0,
+                    ageRange2:0,
+                    heightRange1:0,
+                    heightRange2:0,
+                    isAudit:true,
+                    isValid:true,
+                    workItemsArray:'',
+                    keyWords:''
+            });
+            var AddressTmp = '<%_.each(AddressList,function(item){%>\
+                                <li class="table-view-cell" data-id="<%=item.AreaID%>">\
+                                    <%=item.AreaName%>\
+                                </li>\
+                            <%})%>;';
+            model.save(null, {
+                data: model.attributes,
+                cache: false,
+                success: function(model, response, options) {
+                    localStorage.clear();
+                    if (!response.IsSuccessfully) {
+                        alert(response.ErrorMessage);
+                        return;
+                    }
+                    _this.cityData = response.AddressList;
+                    _this.$el.find('#cityListWraper').html(_.template(AddressTmp)(response));
+                    _this.getPosition();
+                },
+                error: function(model, response, options) {
+                    alert('status: ' + response.status + '\nstatusText:' + response.statusText);
+                    Loading.hide();
+                }
+            });
+        }
     });
 });
